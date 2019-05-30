@@ -1,0 +1,74 @@
+<!--pages/userhelp/userhelp.wxml-->
+
+<view style='font-weight:bold; margin-left:14px;margin-top:10px;font-size:18px'>穿搭style如何高效玩起来？</view>
+<view class='title'>
+<view class='mintitle'><image src='../../images/icon/circle.png' class='icon'></image><view class='text'>可以随意留言各种分类和风格的穿搭</view></view>
+<view class='mintitle'><image src='../../images/icon/circle.png' class='icon'></image><view class='text'>搜索你相搭配的衣服</view></view>
+<view class='mintitle'><image src='../../images/icon/circle.png' class='icon'></image><view class='text'>收藏你喜欢的穿搭图片吗</view></view>
+<view class='mintitle'><image src='../../images/icon/circle.png' class='icon'></image><view class='text'>在图片详情留下你不同的穿搭看法</view></view>
+</view>
+<view class='line'></view>
+<view class='mainstyle'>
+<image mode='aspectFit' src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E8%AF%84%E8%AE%BA.png?sign=c187c9e06eca4f3eb4e2cec3326b3b05&t=1557757643' class='toal'></image><view class='maintext'><view class='maintitle'>如何评论</view>点击评论区用户名即可回复该用户，回复有误，长按评论即可删除自己的评语。下拉刷新评论。</view>
+</view>
+<view class='line'></view>
+<view class='mainstyle1'>
+<view class='maintext'><view class='maintitle'>快收藏起来</view>收藏喜欢的穿搭后可以去我的收藏中查看，当然不喜欢收藏长按图片就可删除。</view>
+<image mode='aspectFit' src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E6%94%B6%E8%97%8F%E5%88%A0%E9%99%A4.png?sign=1756d83dc329e7a66482d67138a0361f&t=1557758626' class='toal'></image>
+</view>
+<view class='line'></view>
+<view class='mainstyle'>
+<image mode='aspectFit' src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87.png?sign=2d116082c8931b5a4fe4dbf28b62ae06&t=1557760891' class='toal'></image><view class='maintext'><view class='maintitle'>有喜欢的穿搭想要分享怎么办</view>在我的收藏页面个上传按钮，点进去便是上传图片界面。</view>
+</view>
+<poster id="poster" bindtap='haibao' hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <view class='share'>感觉小程序还不错吗？点击分享给好友</view>
+</poster>
+
+<view class='line'></view>
+<!-- <view>比心心，亲们对我的小程序有什么建议抖或者好的想法可以提出来的</view> -->
+<!-- 评论区 -->
+<form bindsubmit="formSubmit">
+<view class='input'>
+<input type="text" name="liuyantext" placeholder='{{show}}' class="input-style" value='{{inputValue}}'/>
+<button formType="submit" class="btn" wx:if="{{btnName == '发送'}}">发送</button>
+<button formType="submit" class="btn" wx:else>回复</button>
+<input type="text" name="nickname" value='{{nickName}}' style="display:none;"/>
+<input type="text" name="headimg" value='{{avatarUrl}}' style="display:none;"/>
+</view>
+</form>
+ <view wx:if="{{count == 0}}" style="text-align:center;font-size:14px;color:#ccc;margin-top:15px;">还没有留言，快抢沙发~</view>
+<view style="text-align:center;font-size:14px;color:#ccc;margin-top:15px;" wx:else>以下是留言内容(最多显示20条)</view>
+
+<view class='content'>
+<!-- 父评论 -->
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
+  <view class="headimg"><image src="{{item.headimg}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname" bindtap='replay' data-name="{{item.nickName}}" data-id='{{item._id}}'>{{item.nickName}} <view class="time">{{item.lytime}}</view></view>
+    <view class="text1" bindlongpress="longpress"  data-id='{{item._id}}'>{{item.liuyantext}}
+    <!-- <view class='like'>
+      <image src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E8%B5%9E.png?sign=4bcb8e77294727add59c9886d6363dbf&t=1557451868' class='zan' bindtap='clickzan' wx:if="{{clickor==false}}" data-id='{{item._id}}'></image>
+      <image src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E8%B5%9E%E6%88%90%E5%8A%9F.png?sign=e7b040055b58b29d8e3c46c686ab58bc&t=1557476655' class='zan' data-id='{{item._id}}' bindtap='clickzan' wx:else></image>
+      <view class='countZan' wx:if="{{item.countZan!=0}}">{{item.countZan}}</view>
+      </view> -->
+    </view>
+
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:15px;"></view>
+  <!-- 父评论结尾 -->
+  <!-- 子评论 -->
+  
+  <view wx:for="{{replaylist}}" wx:key="liuyanlist" class="liuyanview1" wx:for-item="sub_item">
+  <view class='display_sub' wx:if="{{sub_item.replayId == item._id}}">
+    <view class="headimg"><image src="{{sub_item.headimg}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname" bindtap='replay' data-name="{{sub_item.nickName}}" data-id='{{item._id}}'>{{sub_item.nickName}} 回复 {{sub_item.replayedName}} <view class="time1">{{sub_item.lytime}}</view></view>
+    <view class="text" bindlongpress="replaylongpress"  data-id='{{sub_item._id}}'>{{sub_item.liuyantext}}</view>
+</view>
+  </view>
+</view>
+<view class='line1'></view>
+</view>
+</view>
+

@@ -1,0 +1,6 @@
+<view class="wcontainer">
+<view wx:if="{{length == 0}}" class='wait'>暂时还没有关于这个的穿搭哦~请坐等更新</view>
+	<view wx:for="{{searchValue}}" wx:for-item="image" class="wpreviewimg" bindtap="wdetails" >
+		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' bindtap='preview' data-index="{{index}}" ></image>
+	</view>
+</view>

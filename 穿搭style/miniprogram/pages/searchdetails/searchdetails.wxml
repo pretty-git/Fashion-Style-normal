@@ -1,0 +1,14 @@
+
+<image src="{{src}}"  class='my_img' mode='aspectFill'  bindtap='previewImage'></image>
+ <image src='http://mkzgr.top:4545/images/215d965e9e6348b88d0c5386a5f9308f.png' style='width:40px;height:40px;position:absolute;top:324rpx;left:580rpx;' ></image>
+
+
+
+<view class='copy_position'><view class='text'><text class='text_style'>{{name}} </text></view>
+<image src="{{copycurrent==1?'http://mkzgr.top:4545/images/ea3e923ce24a42199c7183a15f32ceda.png':'http://mkzgr.top:4545/images/647bae5210724cfa9970d0816dfbcb28.png'}}" class='copy_style' bindtap='copylink' data-id='{{index}}' ></image>
+</view>
+
+<view class='youlike'>猜你喜欢 </view><image src='http://mkzgr.top:4545/images/3c5ebcd48e2949ba978b2455ca6cf9fd.png' class='refresh'></image>
+<view wx:for="{{youlike}}">
+<image src="{{item}}" mode='aspectFill' class='youlike_image' bindtap='previewImage1' data-src='{{item}}' data-index='{{index}}'></image> 
+</view>

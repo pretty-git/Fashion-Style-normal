@@ -1,0 +1,58 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/class/class",
+    "pages/media/media",
+    "pages/addimage/addimage",
+    "pages/collection/collection",
+    "pages/userhelp/userhelp",
+    "pages/pageShare/pageShare",
+    "pages/details/details",
+    "pages/liuyan/liuyan",
+    "pages/my/my",
+    "pages/mmore/mmore",
+    "pages/indexpages/indexpages",
+    "pages/logs/logs",
+    "pages/wmore/wmore",
+    "pages/classifymore/classifymore",
+    "pages/result/result",
+    "pages/your/your",
+    "pages/stylemore/stylemore",
+    "pages/authorize/authorize",
+    "pages/search/search",
+    "pages/searchdetails/searchdetails",
+    "pages/upimage/upimage"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fd6e5e",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "穿搭style"
+  },
+  "tabBar": {
+    "color": "#494844",
+    "selectedColor": "#fd6e5e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/首页.png",
+        "selectedIconPath": "images/icon/首页1.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "images/icon/分类.png",
+        "selectedIconPath": "images/icon/分类1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/我.png",
+        "selectedIconPath": "images/icon/我1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

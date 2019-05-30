@@ -1,0 +1,315 @@
+
+.addtext {
+width:100%;
+text-align:center;
+color:#fe6e5e;
+margin-top:10px;
+}
+.inputstyle {
+  width: 100%;
+  height: 40px;
+  margin-top:20px;
+
+}
+.input {
+  float:left;
+background:#fff;
+width:74%;
+padding:16rpx 0 16rpx 16rpx;
+border:2px solid #e8e8e8;
+border-radius:6px;
+margin-left:5px;
+
+}
+.clear {
+width:59px;
+font-size:14px;
+height:35px;
+line-height:35px;
+border-radius:11px;
+border:1px solid #e8e8e8;
+text-align:center;
+}
+.addimage{
+width: 70%;
+}
+.addImage {
+width:285rpx;
+background-color:#fff;
+margin-top:10px;
+margin-left:120px;
+height:200px;
+box-shadow:1rpx 1rpx 4rpx 6rpx #f7f7f7;
+margin-bottom:10px;
+
+}
+.add_icon {
+width:90rpx;
+margin-top:20rpx;
+height:126rpx;
+border:2rpx solid #e8e8e8;
+box-shadow:0rpx 1rpx 2rpx 2rpx #faf5f5;
+background-color:#fff;
+padding:19rpx 40rpx 20rpx;
+margin-left:40rpx;
+}
+
+.styleclass {
+width:100%;
+height:38px;
+line-height:38px;
+background-color:#fff;
+border-bottom:1px solid #e8e8e8;
+padding-bottom:17px;
+}
+.styleborder {
+  height: 37px;
+  line-height: 37px;
+border:1px solid #e8e8e8;
+  font-size: 14px;
+  border-radius: 15px;
+}
+
+.text {
+position: relative;
+top:36rpx;
+left:-165rpx;
+font-size: 28rpx;
+}
+
+.textstyle {
+width:22%;
+display:block;
+text-align:center;
+float: right;
+margin-top: 6px;
+margin-right: 7px;
+}
+.textstylehover{
+width:22%;
+display:block;
+text-align:center;
+float: right;
+margin-top: 6px;
+margin-right: 7px;
+background-color: #fd6e5e;
+color: #fff;
+}
+.label  {
+  float: left;
+margin-top: 5px;
+margin-left: 10px;
+font-size: 16px;
+}
+.submit {
+color:#fff;
+background-color:rgb(11, 178, 122);
+height:53px;
+width:115px;
+border-radius:15px;
+line-height:53px;
+font-size:19px;
+margin:24px auto;
+text-align:center;
+}
+.classify {
+width:100%;
+height:50px;
+line-height:50px;
+margin-top:10px;
+background-color:#fff;
+border-bottom:1px solid #e8e8e8;
+padding-bottom:6px;
+}
+.class_text {
+margin-left:8px;
+width:35%;
+float:left;
+font-size: 16px;
+}
+.classstyle {
+float:right;
+display:flex;
+
+}
+/* 下拉菜单 */
+.item {
+border:1px solid #e8e8e8;
+width:80px;
+height:36px;
+line-height:36px;
+border-radius:15px;
+margin-right:8px;
+margin-top:6px;
+text-align: center;
+font-size:14px;
+}
+.item_last{
+  border-right: none;
+}
+.right_img {
+  height: 30rpx;
+  width: 30rpx;
+}
+.item_list{
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+ position: absolute; 
+ margin-top:5px;
+
+}
+.item_list_show{
+  /* animation: slide 500ms;8 */
+}
+.item_list_hide{
+  display: none !important;
+}
+@keyframes slide {
+  0% {
+    top: 1025rpx;
+  }
+  100% {
+    top: 1030rpx;
+  }
+}
+.list{
+height:80rpx;
+line-height:80rpx;
+padding:0 40rpx;
+border-bottom:1rpx solid #ddd;
+width:100%;
+
+}
+/* 下拉菜单 */
+
+
+.com_t {
+ border-radius:20rpx;
+background-color:#e6e3e3;
+width:25%;
+height:66rpx;
+color:rgba(0, 0, 0, 0.712);
+display:block;
+text-align:center;
+line-height:66rpx;
+margin:7rpx 0 20rpx 25rpx;
+
+}
+
+.textstyle0 {
+position:relative;
+top:-40px;
+width:88px;
+left:162px;
+}
+
+.textstyle2 {
+  position:relative;
+  top:-40px;
+width:88px;
+left:100px;
+}
+.choose {
+  border:2rpx solid red;
+height:626rpx;
+margin-top:35rpx;
+
+}
+.choose_text {
+  color:red;
+padding:5px 25px;
+width:614rpx;
+display:block;
+
+}
+.warn {
+font-weight: 600;
+text-align:center;
+margin-top: 20rpx;
+}
+/**index.wxss**/
+/* 外面的按钮 */
+.btn{
+  width: 80px;
+  height: 35px;
+  background: #fd6e5e;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  margin:20px auto;
+  border-radius: 100px; 
+}
+ 
+/* 遮罩层 */
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.5;
+}
+ 
+/* 弹出层 */
+.modalDlg{
+    width: 70%;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+ 
+/* 弹出层里面的按钮 */
+.ok{
+  width: 80px;
+  height: 35px;
+  background: #089E9D;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  margin:10px auto 15px;
+  border-radius: 100px;
+}
+.includemin {
+  font-weight: bold;
+  font-size: 17px;
+}
+.next {
+  display: flex;
+  font-size: 32rpx;
+  margin-top:14rpx;
+
+}
+.includetitle {
+  font-weight: bold;
+}
+.icon {
+ width:12px;
+height:12px;
+margin-top:5px;
+margin-right:8px;
+
+}
+.texttan {
+  width: 100%;
+  margin-top: 10px;
+}
+.include {
+width:8%;
+margin-left:6px;
+}

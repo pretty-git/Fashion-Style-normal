@@ -1,0 +1,12 @@
+<scroll-view scroll-y="true"  lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" style="height:{{height}}px">
+<view class='more'>
+<view wx:for="{{imageList}}" class="container_image">
+<image src="{{item}}" class='my_img' mode='aspectFill' bindtap='previewImage' data-src="{{item}}" data-index='{{index}}'></image>
+</view>
+</view>
+ <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+  
+</scroll-view>

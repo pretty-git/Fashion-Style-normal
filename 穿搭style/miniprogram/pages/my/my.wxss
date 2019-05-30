@@ -1,0 +1,33 @@
+@import "/utils/common.wxss";
+
+.navigator-hover button {
+  background-color: #fd6e5e;
+}
+
+.other-navigator-hover button {
+  background-color: #fd6e5e;
+}
+
+.g-bda-userinfo {
+  padding-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 3rpx;
+  margin-bottom: 6rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.i-header{
+  height: 350rpx;
+   background-color: #fd6e5e;   
+   text-align: center;
+}
+.userinfo-nickname{
+  color: #fff;
+}

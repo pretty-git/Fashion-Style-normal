@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "使用帮助与反馈",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "poster": "/miniprogram_dist/poster/index"
+  }
+}

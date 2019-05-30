@@ -1,0 +1,47 @@
+.add_image {
+height: 200rpx;
+}
+.addImage {
+width:108px;
+justify-content:center;
+align-items:303rpx;
+margin:20rpx 0 0 0rpx;
+background-color:#fff;
+height:155px;
+}
+.add_icon {
+width:190rpx;
+height:200rpx;
+padding:120rpx 25rpx;
+
+
+}
+.collect {
+width:100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+float: left;
+}
+.container_image {
+padding:0;
+margin:0;
+width:33.3%;
+height:500rpx;
+
+}
+.save_icon {
+width:27px;
+height:27px;
+position:relative;
+top:-70rpx;
+left:183rpx;
+
+}
+.my_img {
+width:116px;
+border-radius:12rpx;
+background:#fff;
+margin-left:10rpx;
+
+}

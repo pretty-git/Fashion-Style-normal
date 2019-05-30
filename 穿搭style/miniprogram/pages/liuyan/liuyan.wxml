@@ -1,0 +1,46 @@
+<!-- 表单 -->
+<form bindsubmit="formSubmit">
+<view class='input'>
+<input type="text" name="liuyantext" placeholder='{{show}}' class="input-style" value='{{inputValue}}'/>
+<button formType="submit" class="btn" wx:if="{{btnName == '发送'}}">发送</button>
+<button formType="submit" class="btn" wx:else>回复</button>
+<input type="text" name="nickname" value='{{nickName}}' style="display:none;"/>
+<input type="text" name="headimg" value='{{avatarUrl}}' style="display:none;"/>
+</view>
+</form>
+ <view wx:if="{{count == 0}}" style="text-align:center;font-size:14px;color:#ccc;margin-top:15px;">还没有评论，快抢沙发~</view>
+<view style="text-align:center;font-size:14px;color:#ccc;margin-top:15px;" wx:else>以下是评论内容(最多显示20条)</view>
+
+<view class='content'>
+<!-- 父评论 -->
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
+  <view class="headimg"><image src="{{item.headimg}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname" bindtap='replay' data-name="{{item.nickName}}" data-id='{{item._id}}'>{{item.nickName}} <view class="time">{{item.lytime}}</view></view>
+    <view class="text" bindlongpress="longpress"  data-id='{{item._id}}'>{{item.liuyantext}}
+    <!-- <view class='like'>
+      <image src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E8%B5%9E.png?sign=4bcb8e77294727add59c9886d6363dbf&t=1557451868' class='zan' bindtap='clickzan' wx:if="{{clickor==false}}" data-id='{{item._id}}'></image>
+      <image src='https://7765-we-63574e-1258830969.tcb.qcloud.la/%E8%B5%9E%E6%88%90%E5%8A%9F.png?sign=e7b040055b58b29d8e3c46c686ab58bc&t=1557476655' class='zan' data-id='{{item._id}}' bindtap='clickzan' wx:else></image>
+      <view class='countZan' wx:if="{{item.countZan!=0}}">{{item.countZan}}</view>
+      </view> -->
+    </view>
+
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:15px;"></view>
+  <!-- 父评论结尾 -->
+  <!-- 子评论 -->
+  
+  <view wx:for="{{replaylist}}" wx:key="liuyanlist" class="liuyanview1" wx:for-item="sub_item">
+  <view class='display_sub' wx:if="{{sub_item.replayId == item._id}}">
+    <view class="headimg"><image src="{{sub_item.headimg}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname" bindtap='replay' data-name="{{sub_item.nickName}}" data-id='{{item._id}}'>{{sub_item.nickName}} 回复 {{sub_item.replayedName}} <view class="time1">{{sub_item.lytime}}</view></view>
+    <view class="text" bindlongpress="replaylongpress"  data-id='{{sub_item._id}}'>{{sub_item.liuyantext}}</view>
+</view>
+
+  </view>
+</view>
+<view class='line'></view>
+</view>
+</view>

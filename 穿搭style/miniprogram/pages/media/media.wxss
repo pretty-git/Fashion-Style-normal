@@ -1,0 +1,27 @@
+.wait {
+  margin-top: 20px;
+  text-align: center;
+}
+.mcontainer, .wcontainer {
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0 20rpx;
+  
+}
+.mpreviewimg, .wpreviewimg {
+display: flex;
+width: 33.3%;
+justify-content: center; 
+align-items:center;
+}
+.mpreviewimg image, .wpreviewimg image {
+  width: 245rpx;
+  height: 340rpx; 
+  /* width: 110rpx;
+  height: 100rpx; */
+  margin: 8rpx 2rpx 0rpx 2rpx;
+  border: 2rpx solid #eee;
+  vertical-align: middle; 
+  
+}

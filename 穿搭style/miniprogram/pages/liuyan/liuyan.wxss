@@ -1,0 +1,102 @@
+/**index.wxss**/
+.sub-replay {
+  margin-left: 44px;
+}
+.content {
+  width: 100%;
+}
+.input {
+  width: 100%;
+  height: 48px;
+} 
+.input-style{
+ width:70%;
+height:40px;
+margin:10px auto;
+border-radius:25px;
+background:#f3f3f5;
+font-size:14px;
+color:#808286;
+float:left;
+padding-left:18px;
+margin-left: 5px;
+
+}
+ 
+.btn{
+  width:20%;
+font-size:14px;
+margin:13px 0 0 10px;
+float:left;
+border-radius:10px;
+height:36px;
+line-height:36px;
+letter-spacing:2px;
+background:#f3f3f5;
+color: #808286;
+
+}
+ 
+.liuyanview{
+  width: 94%;
+  margin: 10px auto;
+}
+ .liuyanview1{
+  width:98%;
+margin:10px 0px 10px 20px;
+
+}
+.result{
+  text-align: center;
+  font-size: 14px;
+  color: #f00;
+  margin-top: 20px;
+}
+ 
+.headimg{
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+ 
+.headimg image{
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+ 
+.nickname_liuyantext{
+  width: calc(100% - 55px);
+  float: right;
+  margin-top:-45px;
+}
+ 
+.nickname_liuyantext .nickname{
+  font-size: 15px;
+  color: #999;
+}
+ 
+.nickname_liuyantext .nickname .time{
+  font-size: 11px;
+  color: #999;
+  float: right;
+}
+ .nickname_liuyantext .nickname .time1{
+  font-size: 11px;
+  color: #999;
+  float: right;
+  margin-right:13px;
+
+}
+.nickname_liuyantext .text{
+  font-size: 16px;
+  color: #666;
+}
+
+.line {
+ width:96%;
+height:2rpx;
+background:#e8e8e8;
+margin-top:20rpx;
+
+}

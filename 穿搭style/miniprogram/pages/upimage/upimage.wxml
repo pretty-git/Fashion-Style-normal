@@ -1,0 +1,1 @@
+<view class='add_image' bindtap='addImage'> <image src='http://mkzgr.top:4545/images/6e2d6a7ecbd94980896896c1bf0b1bb1.png' class='add_icon' demo="aspectFilt"  > </image></view>

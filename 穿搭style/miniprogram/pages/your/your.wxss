@@ -1,0 +1,28 @@
+/* pages/your/your.wxss */
+.textStyle {
+  font-size:44rpx;
+font-weight:700;
+margin:18rpx 20rpx;
+}
+.author {
+  font-size: 24rpx;
+  color:#999999;
+  margin: 10rpx 18rpx;
+}
+.text {
+font-size:34rpx;
+margin:25rpx 18rpx;
+}
+.firstImage {
+ margin:0 10px;
+width:95%;
+}
+.min-title {
+  font-weight: 700;
+  margin: 10rpx 18rpx;
+}
+.firstImage1 {
+ margin:0 10px;
+width:95%;
+height: 630px;
+}

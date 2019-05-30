@@ -1,0 +1,244 @@
+<view class='textStyle'>测试！你适合穿哪种风格的衣服？！ </view>
+<view class='author'>相关来源于： 搜狐 delicious大金 </view>
+<view class='text'>我想，应该有很多仙女到现在还是不知道自己适合哪一种或者哪几种穿衣风格吧
+</view>
+<view class='text'>很多时候都是看别人这么搭配好看，也不管款式、颜色、风格适不适合自己，就也照样买 </view>
+<image  src="{{imageList[0]}}" data-src="{{imageList[0]}}" class='firstImage' mode="aspectFill" bindtap='priview' ></image>
+<view class='text'>再好看的衣服穿错了风格也会看着很怪异，而穿对了风格，就算是基础款也能穿出炒鸡洋气的感觉！</view>
+<view class='text'>不知道自己的风格？没关系，我收集了三种测试方法，分别从容貌、身材、性格给大家确定一下！</view>
+<image  src='{{imageList[1]}}' data-src="{{imageList[1]}}" class='firstImage' mode="aspectFill" bindtap='priview'></image>
+<view class='min-title'>1</view>
+<view class='min-title'>容貌测试</view>
+
+<view class='text'>下面有九种容貌特征，不一定完全符合你，但是选择和你最接近的吧！
+</view>
+<image  src="{{imageList[2]}}" data-src="{{imageList[2]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+
+<image  src="{{imageList[3]}}" data-src="{{imageList[3]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌A的特点</view>
+<view class='text'>面颊丰满偏大，相貌平，明显的下颌骨，脸和五官相比显大，眼睛适中，眉型平缓。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>容貌A类型的人五官看上去很有东方气质，稳重朴实，给人以信赖感。
+</view>
+<view class='text'>但坚固的轮廓缺乏灵动性，少了些柔软和淡雅的气质。
+</view>
+<image  src="{{imageList[4]}}" data-src="{{imageList[4]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+
+<image  src="{{imageList[5]}}" data-src="{{imageList[5]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌B的特点</view>
+<view class='text'>长方脸，脸盘适中偏小，相貌平，五官秀气精致，眼睛细长，鼻梁细长端正，明显，唇形适中。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>秀气清爽，干净精致是这种容貌的特点，给人一种书卷气质，属于非常耐看的类型。
+</view>
+<image  src="{{imageList[6]}}" data-src="{{imageList[6]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+
+<image  src="{{imageList[7]}}" data-src="{{imageList[7]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌C的特点</view>
+<view class='text'>脸骨感，颧骨高，尖下巴，五官秀气，眼睛长，鼻子高挺，鼻头尖，唇薄，唇峰明显。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>个性突出是C型容貌最显著的特点，
+</view>
+<view class='text'>C型仙女的脸型可以叫做钻石型，通常给人高傲，有距离感的感觉，
+</view>
+<view class='text'>容貌精致突出，看上去是优雅果断的现代派。
+</view>
+<image  src="{{imageList[8]}}" data-src="{{imageList[8]}}" class='firstImage1' mode='aspectFill' bindtap='priview'></image>
+<image  src="{{imageList[9]}}" data-src="{{imageList[9]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+
+<image  src="{{imageList[10]}}" data-src="{{imageList[10]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌D的特点</view>
+<view class='text'>脸盘大，颧骨高，容貌立体，眉毛有力度，鼻梁挺直，眼睛大，下颌宽大
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>方正的脸型充满力量，显得坚定有毅力，高颧骨增加了权威、大气的气场，整体轮廓成熟，严肃；
+</view>
+<view class='text'>
+存在感强的五官中规中距，信赖度高。
+</view>
+<view class='text'>
+D容貌看起来比实际年龄显成熟。
+</view>
+<image  src="{{imageList[11]}}" data-src="{{imageList[11]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[12]}}" data-src="{{imageList[12]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌E的特点</view>
+<view class='text'>脸型偏大，圆润，眉毛明显偏浓，眉眼间距宽，眼睛偏大，双眼皮，鼻子大，鼻头圆，唇厚。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>“脸若银盆，眼如水杏”对薛宝钗容貌的描画正映衬了E型容貌的特征。
+</view>
+<view class='text'>
+存在感明显的五官，圆润妩媚的轮廓，有种大家闺秀的风范，
+</view>
+<view class='text'>不过视觉上感觉成熟老道，E型容貌一般体态也比较丰满。
+</view>
+<image  src="{{imageList[13]}}" data-src="{{imageList[13]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[14]}}" data-src="{{imageList[14]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌F的特点</view>
+<view class='text'>面部圆润，椭圆形眼睛，弯弯的眉毛，双眉间距宽，鼻子小巧，鼻头圆，唇饱满圆润。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>柔和的面部轮廓，弯弯的眼睛，微微翘起的鼻子，圆润饱满的唇，属于非常有女人味的一类。
+</view>
+<image  src="{{imageList[15]}}" data-src="{{imageList[15]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[16]}}" data-src="{{imageList[16]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌G的特点</view>
+<view class='text'>圆脸，圆溜溜的眼睛，鼻子小巧，前额圆润宽阔，唇小唇圆。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>轮廓小巧可爱，仿佛还没长大的小女孩，面容充满稚气，看起来十分活泼俏皮，让人忍不住产生怜惜感。
+</view>
+<view class='text'>
+G型容貌看起来也比同龄人显得年轻，比如林依晨。
+</view>
+
+<image  src="{{imageList[17]}}" data-src="{{imageList[17]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[18]}}" data-src="{{imageList[18]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌H的特点</view>
+<view class='text'>脸型小巧骨感，下巴尖，的长眼睛，嘴唇秀气锋利，眉毛清秀，鼻子小，挺直。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>充满现代感的小巧轮廓,面部线条分明,五官秀气,有简单清纯的印象.
+</view>
+<view class='text'>
+眼睛不大却充满力量,嘴唇薄显得倔强个性,
+</view>
+<view class='text'>
+
+这种容貌的身材一般都修长骨感,肩略宽,胯窄。
+</view>
+
+<image  src="{{imageList[19]}}" data-src="{{imageList[19]}}" class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[20]}}" data-src="{{imageList[20]}}"  class='firstImage' mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>✨容貌I的特点</view>
+<view class='text'>脸型适中，下颔偏大，五官明显突出，粗眉，鼻梁端正，鼻翼稍大，眼睛适中，唇厚大。
+</view>
+<view class='min-title'>✨给人的感觉</view>
+<view class='text'>略显异域的五官看起来自然大方,与生惧来的轻松随意的印象,
+</view>
+<view class='text'>
+偏厚的嘴唇，存在感偏大的五官看上去张扬充满热情。
+</view>
+<image  src="{{imageList[21]}}" data-src="{{imageList[21]}}" class='firstImage1'  mode='aspectFill' bindtap='priview'></image>
+<view class='min-title'>2</view>
+<view class='min-title'>身材测试</view>
+
+<view class='text'>以前就和仙女们经常说身材类型，但还是有仙女不知道自己到底是属于什么身材，以及究竟该怎么穿。
+</view>
+<view class='text'>我们经常说到的身材类型，最多人是属于下面这五种。自己对号入座吧！
+</view>
+<image  src="{{imageList[22]}}" data-src="{{imageList[22]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>沙漏型身材</view>
+<view class='text'>特点是，肩与臀的宽度接近，腰部有一定的曲线。
+</view>
+<view class='min-title'>✨该怎么穿</view>
+<image  src="{{imageList[23]}}" data-src="{{imageList[23]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>三角形身材</view>
+<view class='text'>特点是，肩比臀窄，有溜肩的可能。肉肉经常堆积在大腿和臀部。
+</view>
+<view class='min-title'>✨该怎么穿</view>
+<image  src="{{imageList[24]}}" data-src="{{imageList[24]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>  
+<view class='min-title'>倒三角身材</view>
+<view class='text'>特点是，宽肩窄臀，肉肉通常堆积在身体的上半身，可能整体身材有上宽下窄的感觉
+</view>
+<view class='min-title'>✨该怎么穿</view>
+<image  src="{{imageList[25]}}" data-src="{{imageList[25]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>  
+<view class='min-title'>矩形身材</view>
+<view class='text'>特点是，典型的无曲线身材，或许整体看起来并不算胖，但是因为腰部曲线不够明显，看起来也会壮一些。
+</view>
+<view class='min-title'>✨该怎么穿</view>
+<image  src="{{imageList[26]}}" data-src="{{imageList[26]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>  
+<view class='min-title'>椭圆形身材</view>
+<view class='text'>
+特点是有圆润凸起的腹部，腰部的宽度大于肩部和臀部的宽度。
+</view>
+<view class='min-title'>✨该怎么穿</view>
+<image  src="{{imageList[27]}}" data-src="{{imageList[27]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>  
+<view class='min-title'>3</view>
+<view class='min-title'>性格测试</view>
+
+<view class='text'>上面的两种测试，一个是从容貌角度，一个是从身材角度都是比较科学的，下面再来分享一个比较有趣的。
+</view>
+<view class='text'>这个测试是从性格方面来分析你的风格题目比较简单选择一个和你实际行为比较接近的吧。
+</view>
+<image  src="{{imageList[28]}}" data-src="{{imageList[28]}}"class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>测试题</view>
+
+<view class='text'>再好的情人难免会吵架，接着进入冷战，好几天都不说话。</view>
+
+<view class='text'>只是日子久了，难免开始想念对方，通常这时你都会怎么做呢？</view>
+
+<view class='text'>1.一不做二不休，干脆当作什么事都没发生免得尴尬</view>
+
+<view class='text'>2.假装生气找他理论，再慢慢重修旧好</view>
+
+<view class='text'>3.用纸条来传递讯息，解释彼此的误会</view>
+
+<view class='text'>4.打手机给他，随便找个理由约他假日出去玩</view>
+
+<view class='text'>5.故意找事情刺激他，或透过朋友穿针引线、</view>
+
+<image  src="{{imageList[29]}}" data-src="{{imageList[29]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>测试</view>
+<view class='min-title'>结果</view>
+<view class='min-title'>1. 选“一不做二不休，干脆当作什么事都没发生免得尴尬”</view>
+<view class='text'>女生装扮：随性的休闲风</view>
+
+<view class='text'>男生装扮：自然悠闲不做作的装扮。</view>
+
+<view class='text'>你们都是成熟的人，很有自己的想法，所以面对事情时，也会在分开的日子里把来龙去脉摸得一清二楚。</view>
+
+<view class='text'>虽然你会当作什么事都没发生，可是你也会在往后的日子来作补偿（如果你有错的话）。</view>
+
+<view class='text'>上述的装扮很适合眼神散发自信的你。</view>
+<image  src="{{imageList[30]}}" data-src="{{imageList[30]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[31]}}" data-src="{{imageList[31]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>2. 选“假装生气找他理论，再慢慢重修旧好”</view>
+<view class='text'>女生装扮：流行的个性化穿着；</view>
+
+<view class='text'>男生装扮：豪迈、不拘小节的衣着。</view>
+
+<view class='text'>你们都是很有个性的人，连吵个架都是那样子的另类。</view>
+
+<view class='text'>对你们来说，吵到闹分手才算是要复合的开始呢。</view>
+
+<view class='text'>所以女生可以加一些流行元素在身上，男性则是尽量表现男人气概，例如牛仔打扮或是皮衣西裤类痞子装也很适合你。</view>
+<image  src="{{imageList[32]}}" data-src="{{imageList[32]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[33]}}" data-src="{{imageList[33]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>3. 选“用纸条来传递讯息，解释彼此的误会”</view>
+<view class='text'>女生装扮：高贵优雅的连身洋装；</view>
+
+<view class='text'>男生装扮：自然率性的绅士装扮。</view>
+
+<view class='text'>你们是属于冷静派的人物，所以即使冷战，相信时间也不会太久。</view>
+
+<view class='text'>你们会选择彼此理性沟通的方式，有什么问题当场解决，以后也不会再提起。</view>
+
+<view class='text'>所以女生可以选择高贵不失礼的气质装扮，男生再多点幽默，都可以为你们的魅力加分。</view>
+<image  src="{{imageList[34]}}" data-src="{{imageList[34]}}" class='firstImage1'  mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[35]}}" data-src="{{imageList[35]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>4. 选“打手机给他，随便找个理由约他假日出去玩”</view>
+<view class='text'>女生装扮：紧身穿着展现肢体美；</view>
+
+<view class='text'>男生装扮：运动化风格的年轻打扮。</view>
+
+<view class='text'>你们是凡事大而化之的人物，也是个性直接、率直，嘴巴永远藏不住话的人。</view>
+
+<view class='text'>冷战到后来，你们根本忘记当初是怎么吵架的，只知道曾经有过这件事情。</view>
+
+<image  src="{{imageList[36]}}" data-src="{{imageList[36]}}" class='firstImage1'  mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[37]}}" data-src="{{imageList[37]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>5. 选“故意找事情刺激他，或透过朋友穿针引线”</view>
+<view class='text'>女生装扮：女人味的苏格兰风情；</view>
+
+<view class='text'>男生装扮：西装笔挺、一派成熟稳重。</view>
+
+<view class='text'>你们都是个性很要强的人，就算心里再怎么喜欢对方也是彼此不服输，嘴上不饶人。</view>
+<view class='text'>所以女生方面，适时的表现出你女性温柔的一面；男生则转化为内敛深沉的表态，都可以掩饰你给人倔强的印象，为你的个人魅力加分。</view>
+<image  src="{{imageList[38]}}" data-src="{{imageList[38]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<image  src="{{imageList[39]}}" data-src="{{imageList[39]}}" class='firstImage'  mode='aspectFit' bindtap='priview'></image>
+<view class='min-title'>END</view>
+<view class='text'>快去挑选适合你的穿衣搭配风格吧!</view>
+<view class='text'>也可以分享给你的小伙伴让他们知道自己的穿衣风格哦</view>

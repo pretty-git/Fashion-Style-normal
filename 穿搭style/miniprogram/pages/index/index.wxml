@@ -1,0 +1,55 @@
+<!--pages/index/index.wxml-->
+
+<!--轮播图-->
+  <swiper  style="{{style}}" indicator-dots="{{indicatordots}}"  autoplay="{{autoplay}}" interval="{{interval}}"   duration="{{duration}}">
+  <!--indicatorDots: true,//是否显示面板指示点;
+    autoplay: true,//是否自动播放;
+    interval: 3000,//动画间隔的时间;
+    duration: 500,//动画播放的时长;-->
+    <block wx:for="{{imgUrls}}">
+    <navigator url='/pages/mmore/mmore'>   <!--  图片跳转 -->
+      <swiper-item>
+        <image  data-url="{{item}}" src="{{item}}" class="slide-image" style="width: 100%; height: 350rpx;" mode='aspectFit'/>
+      </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+
+<view class='mark'>
+
+  <view class='mark1'>女士<image  src='{{w1}}' class='w1'  ></image></view>
+  <view class='mark1' bindtap='clickPages'>上装<image data-id="0" src='{{w2}}' class='w2'  ></image></view>
+  <view class='mark1' bindtap='clickPages'>下装<image data-id="1" src='{{w3}}' class='w3'  ></image></view>
+  <view class='mark1' bindtap='clickPages'>鞋子<image data-id="2" src='{{w4}}' class='w4'  ></image></view>
+  <view class='mark2'>男士<image  src='{{m1}}' class='m1'  ></image></view>
+  <view class='mark2' bindtap='clickPages'>上装<image data-id="3" src='{{m2}}' class='m2'  ></image></view>
+  <view class='mark2' bindtap='clickPages'>下装<image data-id="4" src='{{m3}}' class='m3'  ></image></view>
+  <view class='mark2' bindtap='clickPages'>鞋子<image data-id="5" src='{{m4}}' class='m4'  ></image></view>
+</view>
+
+<!-- 女士专区 -->
+<view class='line'></view>
+<view class='woman'>
+<view class='onlyw'>女士专区</view>
+<view class='wmore' bindtap='womanmore'>更多</view><icon class="iconfontw .icon-arrow-right-copy-copy-copy"></icon>
+</view>
+<view class='line'></view>
+<view class="wcontainer">
+	<view wx:for="{{wimageList}}" wx:for-item="image" class="wpreviewimg" bindtap="wdetails" >
+		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' data-index="{{index}}"></image>
+	</view>
+</view>
+
+<!-- 男士专区 -->
+<view class='line'></view>
+<view class='man'>
+<view class='onlym'>男士专区</view>
+<view class='mmore' bindtap='manmore'>更多</view><icon class="iconfontm .icon-arrow-right-copy-copy-copy"></icon>
+</view>
+<view class='line'></view>
+<view class="mcontainer">
+	<view wx:for="{{mimageList}}" wx:for-item="image" class="mpreviewimg" bindtap="mdetails" >
+		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' data-index="{{index}}"></image>
+	</view>
+</view>
+<view style='width:100%;'><view style="margin:10px 0; color:#a1a0a0;font-size:12px;text-align:center;">图片来自网络，若有侵权请联系开发者</view></view>

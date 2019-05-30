@@ -1,0 +1,9 @@
+
+<view  class='collect'>
+
+       <block wx:for="{{imageList}}" wx:for-item="image" >
+          <view class='addimage' bindlongpress='deletec' data-src="{{image}}" >
+            <image class="addImage" src="{{image}}" data-id="{{index}}" data-src="{{image}}" bindtap="previewImage" mode="aspectFit"></image>
+          </view>
+      </block>
+</view>

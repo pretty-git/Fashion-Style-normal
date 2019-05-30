@@ -1,0 +1,6 @@
+<view class="wcontainer">
+<view wx:if="{{total == 0}}" class='wait'>图片正在加载，请等待~</view>
+	<view wx:for="{{colorImage}}" wx:for-item="image" class="wpreviewimg" bindtap="wdetails" >
+		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' bindtap='preview' data-index="{{index}}" ></image>
+	</view>
+</view>

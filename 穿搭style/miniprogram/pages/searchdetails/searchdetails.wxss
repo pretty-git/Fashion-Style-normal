@@ -1,0 +1,55 @@
+.my_img {
+ width:350rpx;
+box-shadow:4rpx 4rpx 8rpx 4rpx #cccaaa;
+margin:40rpx 182rpx;
+}
+page {
+  background-color: #fdfafa;
+}
+.detailimage {
+width:400rpx;
+/* height:528rpx; */
+border:2rpx solid #e8e8e8;
+box-shadow:4rpx 4rpx 8rpx 4rpx #cccaaa;
+}
+.text_style {
+  font-size: 33rpx;
+}
+.copy_style {
+width:50rpx;
+height:50rpx;
+position:relative;
+top:-50rpx;
+left:648rpx;
+}
+.youlike {
+font-size:34rpx;
+margin-left:28rpx;
+margin-top:170rpx;
+border-bottom:2rpx solid #e8e8e8;
+border-top:2rpx solid #e8e8e8;
+height:87rpx;
+line-height:87rpx;
+}
+.copy_position {
+  position: absolute;
+}
+.text {
+  margin: 0 46rpx;
+}
+.refresh {
+width:60rpx;
+height:60rpx;
+position:relative;
+top:-76rpx;
+left:638rpx;
+}
+.youlike_image {
+width:240rpx;
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+float:left;
+margin-top:-36rpx;
+margin-left:8rpx;
+}

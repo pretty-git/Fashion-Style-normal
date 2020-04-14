@@ -162,7 +162,7 @@ else {
   // 获取输入框的值
   inputText:function(e) {
     this.setData({
-      name: e.detail.value.replace(/\ +/g, "")//去掉空格
+      name: e.detail.replace(/\ +/g, "")//去掉空格
     })
     // console.log(this.data.name)
   },

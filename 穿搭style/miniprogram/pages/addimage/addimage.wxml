@@ -1,107 +1,152 @@
-
 <view class='inputstyle'>
-<input placeholder='快给你的穿搭图片起个名字吧' placeholder-style='font-size:16px;' class='input' bindinput='inputText' value='{{inputValue}}' name="name"></input>
-<view style='height:37px;width:66px;float:right;margin-right:7px; margin-top:4px;'>
-<view bindtap='clear' class='clear' >重置</view>
-</view>
+  <!-- <input placeholder='快给你的穿搭图片起个名字吧' placeholder-style='font-size:16px;' class='input' bindinput='inputText' value='{{inputValue}}' name="name"></input> -->
+  <van-cell-group>
+    <van-field
+      value="{{ inputValue }}"
+      label="图片标题"
+      placeholder="请输入"
+      clearable
+      required
+       bind:change="inputText"
+    />
+  </van-cell-group>
+  <!-- <view style='height:37px;width:66px;float:right;margin-right:7px; margin-top:4px;'>
+    <view bindtap='clear' class='clear'>重置</view>
+  </view> -->
 </view>
 <view class='addtext'>点击添加你想上传的穿搭图片吧</view>
 <image src='{{url}}' class='addImage' mode="aspectFit" bindtap='addImage1'></image>
 
- <view class='styleclass'>
-          <view class="label">属于那一种风格</view>
-          <view class='textstyle' >
-          <picker bindchange="bindCasPickerChange2" name="style"  value="{{casArray2[casIndex2]}}" range="{{casArray2}}">
-            <view class='styleborder'>
-              <text>{{casArray2[casIndex2]}}</text>
-            </view>
-          </picker>
-          </view>
+<view class='styleclass'>
+  <view class="label">属于那一种风格</view>
+  <view class='textstyle'>
+    <picker bindchange="bindCasPickerChange2" name="style" value="{{casArray2[casIndex2]}}" range="{{casArray2}}">
+      <view class='styleborder'>
+        <text>{{casArray2[casIndex2]}}</text>
+      </view>
+    </picker>
+  </view>
 
-        </view> 
-         <view class='styleclass'>
-          <view class="label">属于哪一种颜色</view>
-          <view class='textstyle'>
-          <picker bindchange="bindCasPickerChange3" name="color"  value="{{casArray3[casIndex3]}}" range="{{casArray3}}">
-            <view class='styleborder'>
-              <text>{{casArray3[casIndex3]}}</text>
-            </view>
-          </picker>
-          </view>
-        </view>   
+</view>
+<view class='styleclass'>
+  <view class="label">属于哪一种颜色</view>
+  <view class='textstyle'>
+    <picker bindchange="bindCasPickerChange3" name="color" value="{{casArray3[casIndex3]}}" range="{{casArray3}}">
+      <view class='styleborder'>
+        <text>{{casArray3[casIndex3]}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
 <!-- 分类 -->
 
-<view  class='classify'>
-<view class='class_text'>属于哪一种分类</view>
-<view class='classstyle'>
-  <view catchtap="select_item" data-item="1" class="item">{{area}}
-  <!-- <image class="right_img" src="{{area_img}}"></image> -->
-</view>
-<view catchtap="select_item" data-item="2" class="item">{{rent}}
-  <!-- <image class="right_img" src="{{rent_img}}"></image> -->
-</view>
-</view>
-  </view>
-<!-- 列表 -------------------- -->
-
-  <view class="item_list{{!select_area?' item_list_hide':' item_list_show'}}">
-    <view wx:for="{{area_list}}" wx:key="{{index}}" data-index="{{index}}" class="list"> {{item.value}}
-       <picker bindchange="bindCasPickerChange1" value="{{casIndex1}}" range="{{casArray1[0].child}}" wx:if="{{index == casArray1[0].id}}" >
-            <view>
-              <text class='com_t textstyle0'>{{casArray1[0].child[casIndex1]}}</text>
-            </view>
-          </picker>
-           <picker bindchange="bindCasPickerChange4" value="{{casIndex4}}" range="{{casArray4[0].child}}" wx:if="{{index == casArray4[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray4[0].child[casIndex4]}}</text>
-            </view>
-          </picker>
-           <picker bindchange="bindCasPickerChange6" value="{{casIndex6}}" range="{{casArray6[0].child}}" wx:if="{{index == casArray6[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray6[0].child[casIndex6]}}</text>
-            </view>
-          </picker>
-           <picker bindchange="bindCasPickerChange7" value="{{casIndex7}}" range="{{casArray7[0].child}}" wx:if="{{index == casArray7[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray7[0].child[casIndex7]}}</text>
-            </view>
-          </picker>
-           <picker bindchange="bindCasPickerChange8" value="{{casIndex8}}" range="{{casArray8[0].child}}" wx:if="{{index == casArray8[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray8[0].child[casIndex8]}}</text>
-            </view>
-          </picker>
-   </view>
-  </view>
-
-  <view class="item_list{{!select_rent?' item_list_hide':' item_list_show'}}">
-    <view wx:for="{{rent_list}}" wx:key="{{index}}"  data-index="{{index}}" class="list">{{item.value}}
-    <picker bindchange="bindCasPickerChange9" value="{{casIndex9}}" range="{{casArray9[0].child}}" wx:if="{{index == casArray9[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray9[0].child[casIndex9]}}</text>
-            </view>
-          </picker>
-          <picker bindchange="bindCasPickerChange5" value="{{casIndex5}}" range="{{casArray5[0].child}}" wx:if="{{index == casArray5[0].id}}">
-            <view>
-              <text class='com_t textstyle0'>{{casArray5[0].child[casIndex5]}}</text>
-            </view>
-          </picker>
+<view class='classify'>
+  <view class='class_text'>属于哪一种分类</view>
+  <view class='classstyle'>
+    <view catchtap="select_item" data-item="1" class="item">{{area}}
+      <!-- <image class="right_img" src="{{area_img}}"></image> -->
+    </view>
+    <view catchtap="select_item" data-item="2" class="item">{{rent}}
+      <!-- <image class="right_img" src="{{rent_img}}"></image> -->
     </view>
   </view>
- <view formType="submit" class='submit' bindtap='formSubmit'>提交</view>
+</view>
+<!-- 列表 -------------------- -->
+
+<view class="item_list{{!select_area?' item_list_hide':' item_list_show'}}">
+  <view wx:for="{{area_list}}" wx:key="index" data-index="{{index}}" class="list"> {{item.value}}
+    <picker bindchange="bindCasPickerChange1" value="{{casIndex1}}" range="{{casArray1[0].child}}" wx:if="{{index == casArray1[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray1[0].child[casIndex1]}}</text>
+      </view>
+    </picker>
+    <picker bindchange="bindCasPickerChange4" value="{{casIndex4}}" range="{{casArray4[0].child}}" wx:if="{{index == casArray4[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray4[0].child[casIndex4]}}</text>
+      </view>
+    </picker>
+    <picker bindchange="bindCasPickerChange6" value="{{casIndex6}}" range="{{casArray6[0].child}}" wx:if="{{index == casArray6[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray6[0].child[casIndex6]}}</text>
+      </view>
+    </picker>
+    <picker bindchange="bindCasPickerChange7" value="{{casIndex7}}" range="{{casArray7[0].child}}" wx:if="{{index == casArray7[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray7[0].child[casIndex7]}}</text>
+      </view>
+    </picker>
+    <picker bindchange="bindCasPickerChange8" value="{{casIndex8}}" range="{{casArray8[0].child}}" wx:if="{{index == casArray8[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray8[0].child[casIndex8]}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class="item_list{{!select_rent?' item_list_hide':' item_list_show'}}">
+  <view wx:for="{{rent_list}}" wx:key="index" data-index="{{index}}" class="list">{{item.value}}
+    <picker bindchange="bindCasPickerChange9" value="{{casIndex9}}" range="{{casArray9[0].child}}" wx:if="{{index == casArray9[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray9[0].child[casIndex9]}}</text>
+      </view>
+    </picker>
+    <picker bindchange="bindCasPickerChange5" value="{{casIndex5}}" range="{{casArray5[0].child}}" wx:if="{{index == casArray5[0].id}}">
+      <view>
+        <text class='com_t textstyle0'>{{casArray5[0].child[casIndex5]}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view formType="submit" class='submit' bindtap='formSubmit'>提交</view>
 
 <!-- 弹窗 -->
 <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <!-- 弹出层 -->
 <view class="modalDlg" wx:if="{{showModal}}">
-<view class='texttan'>
-<!-- 二维码或其他图片 -->
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view class='includetitle'>上传图片的正确打开方式</view></view>
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view><text class='includemin'>第一步：</text>先给你的图片起个容易别人搜索到的名字，例如T恤、时尚、小个子、显瘦..等关键字</view></view>
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view><text class='includemin'>第二步：</text>点击图片框上传图片</view></view>
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view><text class='includemin'>第三步：</text>看着图片选择风格，颜色，类型等</view></view>
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view><text class='includemin'>最后关键一步：</text>轻点提交</view></view>
-    <view class='next'><view class='include'><image src='../../images/icon/circle.png' class='icon'></image></view><view><text class='includemin'>小提示：</text>上传成功后你的穿搭图片是直接展示出来的，可以去搜索到</view></view>
-    <view bindtap="ok" class="ok">好的</view>
+  <view class='texttan'>
+    <!-- 二维码或其他图片 -->
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view class='includetitle'>上传图片的正确打开方式</view>
     </view>
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view>
+        <text class='includemin'>第一步：</text>先给你的图片起个容易别人搜索到的名字，例如T恤、时尚、小个子、显瘦..等关键字</view>
+    </view>
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view>
+        <text class='includemin'>第二步：</text>点击图片框上传图片</view>
+    </view>
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view>
+        <text class='includemin'>第三步：</text>看着图片选择风格，颜色，类型等</view>
+    </view>
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view>
+        <text class='includemin'>最后关键一步：</text>轻点提交</view>
+    </view>
+    <view class='next'>
+      <view class='include'>
+        <image src='../../images/icon/circle.png' class='icon'></image>
+      </view>
+      <view>
+        <text class='includemin'>小提示：</text>上传成功后你的穿搭图片是直接展示出来的，可以去搜索到</view>
+    </view>
+    <view bindtap="ok" class="ok">好的</view>
+  </view>
 </view>

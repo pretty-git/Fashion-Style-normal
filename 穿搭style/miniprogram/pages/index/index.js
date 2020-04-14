@@ -130,7 +130,7 @@ Page({
           mimageList: list,
           mnameImage: name
         })
-        console.log(that.data.mimageList)
+        console.log(that.data.mimageList,'男士')
         // console.log(that.data.styleList)
         // console.log(res.result.data[0].url)
       },
@@ -208,7 +208,7 @@ Page({
       wimageList: list,
       wnameImage: name
     })
-
+//男士
     var list;
     var style;
     var n = util.randomNum(that.data.manImage.length - 1, 6)

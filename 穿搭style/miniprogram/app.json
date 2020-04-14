@@ -2,9 +2,12 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
+    "pages/addimage/addimage",
+    
+    "pages/weather/weather",
     "pages/class/class",
     "pages/media/media",
-    "pages/addimage/addimage",
+    
     "pages/collection/collection",
     "pages/userhelp/userhelp",
     "pages/pageShare/pageShare",
@@ -46,6 +49,13 @@
         "iconPath": "images/icon/分类.png",
         "selectedIconPath": "images/icon/分类1.png"
       },
+     {
+      "pagePath": "pages/weather/weather",
+      "text": "天气",
+      "iconPath": "images/icon/weather.png",
+      "selectedIconPath": "images/icon/wether2.png"
+    },
+    
       {
         "pagePath": "pages/my/my",
         "text": "我的",

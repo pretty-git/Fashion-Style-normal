@@ -1,4 +1,13 @@
+.button {
+  vertical-align: middle;
+}
 
+.custom-icon {
+  color: #1989fa;
+}
+page {
+  background-color: #F7F8FA !important;
+}
 .addtext {
 width:100%;
 text-align:center;
@@ -103,10 +112,9 @@ font-size: 16px;
 }
 .submit {
 color:#fff;
-background-color:rgb(11, 178, 122);
+background-color:#07c160;
 height:53px;
-width:115px;
-border-radius:15px;
+width:100%;
 line-height:53px;
 font-size:19px;
 margin:24px auto;

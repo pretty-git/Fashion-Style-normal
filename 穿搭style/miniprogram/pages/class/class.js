@@ -759,7 +759,7 @@ Page({
               icon: 'none',
               title: '图片上传成功',
             })
-            console.log('[上传文件] 成功：', res)
+            // console.log('[上传文件] 成功：', res)
             that.setData({
               cloudPath1: 'https://7765-we-63574e-1258830969.tcb.qcloud.la/' + cloudPath
             })
@@ -798,7 +798,7 @@ Page({
           success: res => {
             // 你可以在这里实现你想要的功能,我这里只是简单的把 info(信息)存入全局data中而已
             wx.hideLoading()
-            console.log(res)
+            // console.log(res)
             var upper_color = res.data.person_info[0].attributes.upper_color.name
 
             wx.navigateTo({
@@ -818,9 +818,9 @@ Page({
         a: '红'
       },
       success: res => {
-        console.log(res.result.data)
+        // console.log(res.result.data)
         var n = util.randomNum(that.data.total-1, 21)
-        console.log(n)
+        // console.log(n)
         var list = that.data.colorImage.concat(res.result.data[n[0]].url);
         var name = that.data.nameImage.concat(res.result.data[n[0]].name);
         for (var i = 1; i < 21; i++) {
@@ -886,7 +886,7 @@ Page({
     //     that.setData({
     //       total: res.total
     //     })
-    //     console.log(count); 
+        console.log(count); 
     //   }
     // })
     wx.cloud.callFunction({
@@ -911,7 +911,7 @@ Page({
           colorImage: list,
           nameImage: name
         })
-        console.log(that.data.colorImage)
+        // console.log(that.data.colorImage)
       },
       fail: err => {
         wx.showToast({
@@ -952,7 +952,7 @@ Page({
     })
   },//点击换分类右侧页面
   switchcolorbt: function (e) {
-    //  console.log(this.data.colorbt[0].child)
+     console.log(this.data.colorbt[0].child)
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
@@ -1029,7 +1029,7 @@ Page({
   },
   clickMore: function (e) {   //风格分类页面
     var id = e.target.dataset.id;
-    console.log(this.data.styleItems[id-1].cate_name)
+    // console.log(this.data.styleItems[id-1].cate_name)
     wx.navigateTo({
       url: '../stylemore/stylemore?id=' + this.data.styleItems[id - 1].cate_name
     })

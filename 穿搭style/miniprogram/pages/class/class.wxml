@@ -72,43 +72,43 @@
 </view>
 <!-- 颜色页面内容 -->
     <view wx:if="{{colortab==0}}">
-     <block wx:for="{{colorImage}}">
+     <block wx:for="{{colorImage}}" wx:key="index">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
    </view>
 
     <view wx:if="{{colortab==1}}">
-     <block wx:for="{{colorImage}}">
+     <block wx:for="{{colorImage}}" wx:key="index">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>
     <view wx:if="{{colortab==2}}">
-       <block wx:for="{{colorImage}}">
+       <block wx:for="{{colorImage}}" wx:key="index">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>
     <view wx:if="{{colortab==3}}">
-     <block wx:for="{{colorImage}}">
+     <block wx:key="index" wx:for="{{colorImage}}">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
    </view>
     <view wx:if="{{colortab==4}}">
-     <block wx:for="{{colorImage}}">
+     <block wx:key="index" wx:for="{{colorImage}}">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>
     <view wx:if="{{colortab==5}}">
-       <block wx:for="{{colorImage}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>
       <view wx:if="{{colortab==6}}">
-       <block wx:for="{{colorImage}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>
       <view wx:if="{{colortab==7}}">
-       <block wx:for="{{colorImage}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
     <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
    </block>
     </view>

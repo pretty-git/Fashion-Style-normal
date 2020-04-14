@@ -1,4 +1,4 @@
-<import src="../../style/footer.wxml"  />
+
 <view class="page">
     <view class="page__hd i-header">
         <view class="g-bd">
@@ -28,7 +28,7 @@
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                             
                         </navigator>
-                         <navigator url="../upimage/upimage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                         <navigator url="../addimage/addimage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                             <view class="weui-cell__hd">
                                 <image src="../../images/image.png" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;"  />
                             </view>

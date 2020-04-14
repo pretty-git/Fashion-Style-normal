@@ -6,7 +6,7 @@
     autoplay: true,//是否自动播放;
     interval: 3000,//动画间隔的时间;
     duration: 500,//动画播放的时长;-->
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
     <navigator url='/pages/mmore/mmore'>   <!--  图片跳转 -->
       <swiper-item>
         <image  data-url="{{item}}" src="{{item}}" class="slide-image" style="width: 100%; height: 350rpx;" mode='aspectFit'/>
@@ -35,7 +35,7 @@
 </view>
 <view class='line'></view>
 <view class="wcontainer">
-	<view wx:for="{{wimageList}}" wx:for-item="image" class="wpreviewimg" bindtap="wdetails" >
+	<view wx:for="{{wimageList}}" wx:for-index="index" wx:for-item="image" wx:key="index" class="wpreviewimg" bindtap="wdetails" >
 		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' data-index="{{index}}"></image>
 	</view>
 </view>
@@ -48,7 +48,7 @@
 </view>
 <view class='line'></view>
 <view class="mcontainer">
-	<view wx:for="{{mimageList}}" wx:for-item="image" class="mpreviewimg" bindtap="mdetails" >
+	<view wx:for="{{mimageList}}" wx:for-index="index" wx:for-item="image" wx:key="index" class="mpreviewimg" bindtap="mdetails" >
 		<image src="{{image}}" data-src="{{image}}" mode='aspectFill' data-index="{{index}}"></image>
 	</view>
 </view>

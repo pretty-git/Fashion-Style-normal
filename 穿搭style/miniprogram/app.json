@@ -1,10 +1,11 @@
 {
   "cloud": true,
   "pages": [
+    "pages/weather/weather",
     "pages/index/index",
     "pages/addimage/addimage",
     
-    "pages/weather/weather",
+    
     "pages/class/class",
     "pages/media/media",
     

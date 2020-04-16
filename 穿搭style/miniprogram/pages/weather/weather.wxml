@@ -1,3 +1,51 @@
-<view class="weather"> 
-  <text>{{weatherData}}</text> 
+<view class="map">
+  {{location}} <image src="../../images/map.png" mode="aspectFill"  style="width: 15px;height: 15px;"></image>
+</view>
+<view class="weather">
+  <view class="top">
+    {{weatherData.liveData.temperature}}
+    <view class="icon">℃</view>
+  </view>
+  <view class="images">
+    <image src="{{imagsrc}}" mode="aspectFill"></image>
+  </view>
+</view>
+<view class="air">
+  <view  style="width:40%;text-align:center;margin:10px 0;">
+    <image src="../../images/tree.png" mode="aspectFill" style=" width: 100px;height: 100px;"></image>
+    <view>空气质量良</view>
+  </view>
+  <view class="right">
+    <view>
+      <text class="title">相对湿度：</text>
+      <text>{{weatherData.humidity.data}}</text>
+    </view>
+     <view>
+      <text class="title">实时气压：</text>
+      <text>{{weatherData.liveData.humidity}} hpa</text>
+    </view>
+    <view>
+      <text class="title">风向风力：</text>
+      <text>{{weatherData.winddirection.data}}，{{weatherData.windpower.data}}</text>
+    </view>
+  </view>
+</view>
+<!-- 最近几天 -->
+<view style="display:flex;font-size:13px;font-weight:200;">
+<view wx:for="{{dayList}}" wx:key="index" style="width:33.3%;border-right: 0.5px solid #d3d3d3;">
+    <view  style="text-align:center;margin:10px 0;">
+    <image src="{{item.src}}" mode="aspectFill" style=" width: 60px;height: 60px;"></image>
+    <view>{{item.text_night}}</view>
+    <view>{{item.low}}℃ ~ {{item.high}}℃</view>
+    <view wx:if="{{index == 0}}">明天</view>
+    <view wx:elif="{{index == 1}}">后天</view>
+    <view wx:else>{{item.date}}</view>
+  </view>
+</view>
+</view>
+<view style="display:flex;font-size:13px;font-weight:200;width:100%;flex-wrap: wrap;border-top-style: solid;border-top-color: #e8e8e873;border-top-width: 8px;">
+<view wx:for="{{livelist}}" wx:key="index" style="width:33.3%;text-align:center;margin:10px 0;">
+   <image src="{{item.src}}" mode="aspectFill" style=" width: 50px;height: 50px;"></image>
+    <view>{{item.title}}</view>
+</view>
 </view>

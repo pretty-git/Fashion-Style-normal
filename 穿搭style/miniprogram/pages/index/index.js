@@ -52,6 +52,9 @@ Page({
     mnameImage: [],
   },
   onLoad: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
     var that = this;
     // wx.removeStorageSync("collection")
    
@@ -130,6 +133,7 @@ Page({
           mimageList: list,
           mnameImage: name
         })
+        wx.hideLoading()
         console.log(that.data.mimageList,'男士')
         // console.log(that.data.styleList)
         // console.log(res.result.data[0].url)

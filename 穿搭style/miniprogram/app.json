@@ -1,8 +1,9 @@
 {
   "cloud": true,
   "pages": [
-    "pages/weather/weather",
     "pages/index/index",
+    "pages/weather/weather",
+    
     "pages/addimage/addimage",
     
     

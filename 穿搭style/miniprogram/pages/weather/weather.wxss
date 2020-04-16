@@ -1,12 +1,64 @@
-.container{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #4D8AD7;
-  color: #fff;
-  font-size: 18px;
-  padding-top: 200rpx;
-  padding-left: 150rpx;
+.map {
+    font-size: 14px;
+    text-align: left;
+    height: 20px;
+    font-weight: 100;
+    padding: 5px 10px;
+}
+.weather {
+  width: 100%;
+  display: flex;
+}
+.icon {
+position: absolute;
+right: 6px;
+font-size: 29px;
+top: 18px;
+
+}
+.top {
+ position: relative;
+font-size: 80px;
+width: 50%;
+text-align: center;
+margin: 20px 0;
+font-weight: 100;
+letter-spacing: 2px;
+
+
+}
+.images {
+  width: 50%;
+  text-align: center;
+margin: 40px 0 20px;
+
+
+}
+.images image {
+  width: 100px;
+  height: 100px;
+}
+.air {
+  
+  width: 100%;
+border-top-style: solid;
+border-top-color: #e8e8e873;
+border-top-width: 8px;
+border-bottom-color: #e8e8e873;
+border-bottom-width: 10px;
+display: flex;
+
+border-bottom-style: solid;
+
+}
+.right {
+  margin: auto 0;
+border-left: 0.5px solid #d3d3d3;
+padding: 20px 0;
+padding-left: 20px;
+
+}
+.title {
+  font-size: 13px;
+  color: #c4c3c3;
 }

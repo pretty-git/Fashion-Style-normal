@@ -2,11 +2,16 @@
 <view class="page">
     <view class="page__hd i-header">
         <view class="g-bd">
-            <view></view>
-            <view class="g-bda">
-                <view bindtap="" class="g-bda-userinfo">
+            <view class="g-bda" wx:if="{{userInfo}}">
+                <view  class="g-bda-userinfo">
                     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
                     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                </view>
+            </view>
+            <view wx:else>
+               <view bindtap="getuserinfo" class="g-bda-userinfo">
+                    <image class="userinfo-avatar" ></image>
+                    <text class="userinfo-nickname">点击登陆</text>
                 </view>
             </view>
         </view>

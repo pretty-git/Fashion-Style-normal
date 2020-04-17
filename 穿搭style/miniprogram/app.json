@@ -29,11 +29,16 @@
     "pages/searchdetails/searchdetails",
     "pages/upimage/upimage"
   ],
+"permission": {
+  "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    } },
   "window": {
     "navigationBarBackgroundColor": "#fd6e5e",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "穿搭style"
   },
+  
   "tabBar": {
     "color": "#494844",
     "selectedColor": "#fd6e5e",

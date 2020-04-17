@@ -3,13 +3,9 @@
   "pages": [
     "pages/index/index",
     "pages/weather/weather",
-    
     "pages/addimage/addimage",
-    
-    
     "pages/class/class",
     "pages/media/media",
-    
     "pages/collection/collection",
     "pages/userhelp/userhelp",
     "pages/pageShare/pageShare",

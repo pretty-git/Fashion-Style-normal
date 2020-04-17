@@ -1,5 +1,5 @@
 .map {
-    font-size: 14px;
+    font-size: 18px;
     text-align: left;
     height: 20px;
     font-weight: 100;
@@ -42,9 +42,9 @@ margin: 40px 0 20px;
   
   width: 100%;
 border-top-style: solid;
-border-top-color: #e8e8e873;
+border-top-color: #ebebeb;
 border-top-width: 8px;
-border-bottom-color: #e8e8e873;
+border-bottom-color: #ebebeb;
 border-bottom-width: 10px;
 display: flex;
 

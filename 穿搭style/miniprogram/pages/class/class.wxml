@@ -15,8 +15,8 @@
     <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">风格</view>
     <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">颜色</view>
 </view>
- 
-<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{winHeight - 30}}px" bindchange="bindChange">
+ <view style="width:100%;height:130px;background-color:#fff;"></view>
+<swiper current="{{currentTab}}" class="swiper" duration="300"  bindchange="bindChange">
 <!-- 分类页面 -->
      <swiper-item>
     <scroll-view scroll-y='true'>

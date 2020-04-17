@@ -12,7 +12,7 @@
 </view>
 <view class="air">
   <view  style="width:40%;text-align:center;margin:10px 0;">
-    <image src="../../images/tree.png" mode="aspectFill" style=" width: 100px;height: 100px;"></image>
+    <image src="https://7765-we-63574e-1258830969.tcb.qcloud.la/weather/tree.png?sign=0a38853996f76ed0488dc8dd66ea6603&t=1587103993" mode="aspectFill" style=" width: 100px;height: 100px;"></image>
     <view>空气质量良</view>
   </view>
   <view class="right">
@@ -43,9 +43,9 @@
   </view>
 </view>
 </view>
-<view style="display:flex;font-size:13px;font-weight:200;width:100%;flex-wrap: wrap;border-top-style: solid;border-top-color: #e8e8e873;border-top-width: 8px;">
+<view style="display:flex;font-size:13px;font-weight:200;width:100%;flex-wrap: wrap;border-top-style: solid;border-top-color: #ebebeb;border-top-width: 8px;">
 <view wx:for="{{livelist}}" wx:key="index" style="width:33.3%;text-align:center;margin:10px 0;">
-   <image src="{{item.src}}" mode="aspectFill" style=" width: 50px;height: 50px;"></image>
+   <image src="{{item.src}}" mode="aspectFill" style=" width: 50px;height: 47px;"></image>
     <view>{{item.title}}</view>
 </view>
 </view>

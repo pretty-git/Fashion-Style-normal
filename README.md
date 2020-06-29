@@ -5,7 +5,7 @@
 
 ### 小程序二维码
 
-![](https://7765-we-63574e-1258830969.tcb.qcloud.la/logo.jpg?sign=27d17f742d99f912d6f9484d15a47e25&t=1593440328)
+![小程序二维码](https://7765-we-63574e-1258830969.tcb.qcloud.la/logo.jpg?sign=27d17f742d99f912d6f9484d15a47e25&t=1593440328)
 
 ### 项目展示图
 ![首页](https://7765-we-63574e-1258830969.tcb.qcloud.la/style/index.png?sign=fa330eb7734c4caf5cd82e1cb870585c&t=1587136079)

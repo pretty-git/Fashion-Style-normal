@@ -507,11 +507,11 @@ Page({
           [
             {
               child_id: 1,
-              image: "http://mkzgr.top:4545/images/0a6ee3285d0a499d9c45898294831675.png"
+              image: "https://7765-we-63574e-1258830969.tcb.qcloud.la/style%E5%9B%BE%E7%89%87/%E6%B7%91%E5%A5%B3.jpg?sign=0d663bf55f7bd89b041149e583abdc41&t=1557930985"
             },
             {
               child_id: 2,
-              image: "http://mkzgr.top:4545/images/8d3c74a937bf4a7bbdcabeb81bfda27d.png"
+              image: "https://7765-we-63574e-1258830969.tcb.qcloud.la/style%E5%9B%BE%E7%89%87/%E6%81%8B%E7%88%B1%E6%B0%94%E6%81%AF3.jpg?sign=880b87e0277f522a584872d02e29497a&t=1557929714"
             },
             {
               child_id: 3,

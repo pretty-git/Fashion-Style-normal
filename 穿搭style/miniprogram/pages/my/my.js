@@ -56,8 +56,5 @@ Page({
       content:  '图片来自网络，若有侵权，请联系作者删除！' || '',
       showCancel: false
     });
-    wx.makePhoneCall({
-      phoneNumber: '15559193973' // 仅为示例，并非真实的电话号码
-    })
   }
 });

@@ -38,14 +38,14 @@ Page({
       'https://7765-we-63574e-1258830969.tcb.qcloud.la/banner/banner2.png?sign=d48cf1a372e00e2d061a150327260223&t=1557835086',
       'https://7765-we-63574e-1258830969.tcb.qcloud.la/banner/banner1.png?sign=7f21ec07c5d28b6a88630077182791d1&t=1557835097'
     ],
-    w1: "http://mkzgr.top:4545/images/c859d986444349c8993b22df9846ef1e.png",
-    w2: "http://mkzgr.top:4545/images/ecaa4572334f46199bf83b76cc1e614d.png",
-    w3: "http://mkzgr.top:4545/images/0b7c733560f94d57a983ea55b0629481.png",
-    w4: "http://mkzgr.top:4545/images/3e5069ec2c7d467c9666253a9405de40.png",
-    m1: "http://mkzgr.top:4545/images/dc3631b50a174aadbd4695adc1a861d0.png",
-    m2: "http://mkzgr.top:4545/images/b56a5605791842bdb4a613818f8c1d4c.png",
-    m3: "http://mkzgr.top:4545/images/7c81695d3df9487aad6ecb615e323276.png",
-    m4: "http://mkzgr.top:4545/images/3d95e010c71d49a08531257177203d2f.png",
+    w1: "../../images/icon/w0.png",
+    w2: "../../images/icon/w1.png",
+    w3: "../../images/icon/w2.png",
+    w4: "../../images/icon/w2.png",
+    m1: "../../images/icon/m0.png",
+    m2: "../../images/icon/m0.png",
+    m3: "../../images/icon/m0.png",
+    m4: "../../images/icon/m0.png",
     wimageList: [],
     wnameImage: [],
     mimageList: [],
@@ -134,7 +134,7 @@ Page({
           mnameImage: name
         })
         wx.hideLoading()
-        console.log(that.data.mimageList,'男士')
+        // console.log(that.data.mimageList,'男士')
         // console.log(that.data.styleList)
         // console.log(res.result.data[0].url)
       },

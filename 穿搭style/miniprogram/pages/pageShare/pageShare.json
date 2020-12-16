@@ -2,7 +2,5 @@
   "navigationBarTitleText": "分享",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "WxModal": "/component/WxModal/WxModal",
-    "WxPoster": "/component/WxPoster/WxPoster"
   }
 }

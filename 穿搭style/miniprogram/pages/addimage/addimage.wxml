@@ -1,21 +1,19 @@
-<view class='inputstyle'>
-  <!-- <input placeholder='快给你的穿搭图片起个名字吧' placeholder-style='font-size:16px;' class='input' bindinput='inputText' value='{{inputValue}}' name="name"></input> -->
-  <van-cell-group>
-    <van-field
-      value="{{ inputValue }}"
-      label="图片标题"
-      placeholder="请输入"
-      clearable
-      required
-       bind:change="inputText"
-    />
-  </van-cell-group>
-  <!-- <view style='height:37px;width:66px;float:right;margin-right:7px; margin-top:4px;'>
-    <view bindtap='clear' class='clear'>重置</view>
-  </view> -->
+
+<view class="addimage" bindtap='addImage'>
+  <image src='{{url}}' mode="aspectFit" ></image>
+ <image src="../../images/media.png" mode="aspectFit" class="addicon"></image>
 </view>
-<view class='addtext'>点击添加你想上传的穿搭图片吧</view>
-<image src='{{url}}' class='addImage' mode="aspectFit" bindtap='addImage1'></image>
+<van-popup show="{{ show }}" bind:close="onClose">
+<view class="titleback">
+  <view class="title">请输入图片标题</view>
+  <view>
+    <input class="inputvalue" type="text" value="{{ title }}" bindblur="inputText" />
+  </view>
+  <view>
+   <view class="titlebtn" bindtap="close">确定</view>
+  </view>
+</view>
+</van-popup>
 
 <view class='styleclass'>
   <view class="label">属于那一种风格</view>
@@ -26,8 +24,8 @@
       </view>
     </picker>
   </view>
-
 </view>
+
 <view class='styleclass'>
   <view class="label">属于哪一种颜色</view>
   <view class='textstyle'>

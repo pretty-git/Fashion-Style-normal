@@ -1,5 +1,123 @@
 /* pages/index/index.wxss */
+.ban-list {
+  display: flex;
+  height: 100px;
+  width: 90%;
+  margin: 10px auto;
+  background-color: #F1F4F9;
+}
+.ban-url0 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url0 image {
+  width: 53%;
+  height: 74%;
+  margin: auto;
+}
+.ban-url1 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url1 image {
+  width: 65%;
+  height: 85%;
+  margin: auto;
+}
+.ban-url1 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url1 image {
+  width: 65%;
+  height: 85%;
+  margin: auto;
+}
+.ban-url2 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url2 image {
+  width: 30%;
+  height: 86%;
+  margin: auto;
+}
+.ban-url1 {
+  width: 43%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url1 image {
+  width: 39%;
+  height: 85%;
+  margin: auto;
+}
+.ban-url3 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url3 image {
+  width: 52%;
+  height: 63%;
+  margin: auto;
+}
+.ban-url4 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url4 image {
+  width: 24%;
+  height: 85%;
+  margin: auto;
+}
+.ban-url5 {
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+.ban-url5 image {
+  width: 28%;
+  height: 74%;
+  margin: auto;
+}
+.ban-item {
+  text-align: center;
+  margin: auto;
+}
+.ban-title {
+  font-size: 24px;
+font-weight: 900;
 
+}
+.ban-english {
+  font-size: 14px;
+  color: #C3C3C7;
+  font-weight: 800;
+}
+
+/* ----------------------------------- */
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -51,7 +169,7 @@
   display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
-  background-color: #fd6e5e;
+  background-color: #fff;
 }
 
 .weui-icon-search {
@@ -76,8 +194,9 @@
   -webkit-box-flex: 1;
   -webkit-flex: auto;
   flex: auto;
-  border-radius: 34rpx;
+  border-radius: 10px;
   background: #fff;
+  border: 2px solid #eee;
 }
 
 .weui-search-bar__box {

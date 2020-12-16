@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "van-field": "../../dist/field/index",
+    "van-popup":"../../dist/popup/index",
     "van-button": "../../dist/button/index"
-  }
+  },
+  "navigationBarTitleText": "上传穿搭分享图片"
 }

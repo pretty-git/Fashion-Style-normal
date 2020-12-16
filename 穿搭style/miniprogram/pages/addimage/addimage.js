@@ -8,7 +8,7 @@ Page({
    */
   data: {
     // 下拉菜单
-
+    show:false,
     testbtn1:false,
     testbtn2: false,
     testbtn3: false,
@@ -69,6 +69,18 @@ Page({
     classify: '',
     filePath:'',
     cloudPath:''
+  },
+  // 关闭标题弹窗
+  close(){
+    this.setData({
+      show:false
+    })
+    this.addImage1()
+  },
+  onClose(){
+    this.setData({
+      show:false
+    })
   },
   // 下拉菜单
   select_item: function (e) {
@@ -162,7 +174,7 @@ else {
   // 获取输入框的值
   inputText:function(e) {
     this.setData({
-      name: e.detail.replace(/\ +/g, "")//去掉空格
+      name: e.detail.value.replace(/\ +/g, "")//去掉空格
     })
     // console.log(this.data.name)
   },
@@ -270,8 +282,14 @@ else {
     console.log(this.data.classify)
     // console.log(this.data.color)
   },
+  addImage(){
+    this.setData({
+      show:true
+    })
+  },
   // 上传图片
   addImage1: function () {
+ 
     var that = this;
     var name= that.data.name
     if (!name) {
@@ -329,11 +347,6 @@ else {
       }
     })
     }
-  },
-  clear: function () {
-    this.setData({
-      inputValue: ''
-    })//input文字清空
   },
 onLoad:function() {
   var that = this

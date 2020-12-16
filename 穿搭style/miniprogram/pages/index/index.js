@@ -6,7 +6,7 @@ Page({
   data: {
     placeholder: '输入你想搜索的搭配元素',
     imgUrls:'',
-    style: "width:100%",
+    style: "",
     indicatordots: "true",
     autoplay: "true",
     interval: "3000",

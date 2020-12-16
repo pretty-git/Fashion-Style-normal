@@ -1,17 +1,19 @@
 {
   "cloud": true,
   "pages": [
-    "pages/index/index",
-    "pages/weather/weather",
+     "pages/index/index",
+    "pages/video/video",
+    "pages/search/search",
+    "pages/authorize/authorize",
     "pages/addimage/addimage",
+    "pages/my/my",
     "pages/class/class",
+    "pages/weather/weather",
     "pages/media/media",
     "pages/collection/collection",
     "pages/userhelp/userhelp",
-    "pages/pageShare/pageShare",
     "pages/details/details",
     "pages/liuyan/liuyan",
-    "pages/my/my",
     "pages/mmore/mmore",
     "pages/indexpages/indexpages",
     "pages/logs/logs",
@@ -20,8 +22,8 @@
     "pages/result/result",
     "pages/your/your",
     "pages/stylemore/stylemore",
-    "pages/authorize/authorize",
-    "pages/search/search",
+   
+    
     "pages/searchdetails/searchdetails",
     "pages/upimage/upimage"
   ],
@@ -30,8 +32,8 @@
     "desc": "你的位置信息将用于小程序位置接口的效果展示"
     } },
   "window": {
-    "navigationBarBackgroundColor": "#fd6e5e",
-    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "穿搭style"
   },
   
@@ -43,14 +45,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/icon/首页.png",
-        "selectedIconPath": "images/icon/首页1.png"
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index1.png"
       },
       {
         "pagePath": "pages/class/class",
         "text": "分类",
-        "iconPath": "images/icon/分类.png",
-        "selectedIconPath": "images/icon/分类1.png"
+        "iconPath": "images/icon/class.png",
+        "selectedIconPath": "images/icon/class1.png"
       },
      {
       "pagePath": "pages/weather/weather",
@@ -62,8 +64,8 @@
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "images/icon/我.png",
-        "selectedIconPath": "images/icon/我1.png"
+        "iconPath": "images/icon/me.png",
+        "selectedIconPath": "images/icon/me1.png"
       }
     ]
   },

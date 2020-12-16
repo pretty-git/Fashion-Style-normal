@@ -1,5 +1,10 @@
 /* pages/index/index.wxss */
    /* 轮播图*/
+   .swipers {
+    width:95%;
+    margin:10px auto; 
+    box-shadow:(0 5px 20px 0 #FDDFD7, 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+  }
 .mark {
   display: flex;
   flex-direction: row;
@@ -163,7 +168,7 @@
   display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   padding: 0 60rpx;
+   padding: 0 20rpx;
   
 }
 .mpreviewimg, .wpreviewimg {

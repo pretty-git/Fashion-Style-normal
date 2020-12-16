@@ -1,0 +1,155 @@
+<!-- 搜索框模块 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="15"></icon>
+      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索入口" bindtap="wxSearchTab"/>
+      <image src='../../images/media.png' class='media' bindtap='media'></image> 
+      <!-- 颜色提取 -->
+    </view>
+  </view>
+</view>
+<!--pages/index/index.wxml-->
+<view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">分类</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">风格</view>
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">颜色</view>
+</view>
+ <view style="width:100%;height:130px;background-color:#fff;"></view>
+<swiper current="{{currentTab}}" class="swiper" duration="300"  bindchange="bindChange">
+<!-- 分类页面 -->
+     <swiper-item>
+    <scroll-view scroll-y='true'>
+       <view><view class="container">
+ <!-- 左侧栏 -->
+  <view class="nav_left">
+    <block wx:for="{{cateItems}}" wx:key="id">
+      <view  bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}"
+      class="nav_left_items"
+      style= " {{(curNav == item.cate_id) ? ((curNav>5)?'color:#00665B; border-left: 10rpx solid #00665B;':'color:#fd6e5e; border-left: 10rpx solid #fd6e5e;'):''}} ">{{item.cate_name}}</view>
+    </block>
+  </view>
+  <!--右侧栏-->
+<view class="nav_right">
+    <!-- 如果有孩子才跳转 -->
+      <block wx:for="{{cateItems[curIndex].children}}" wx:key="id">
+        <view class="nav_right_items">
+            <image src="{{item.image}}" bindtap='classifyclick' mode='aspectFill' data-name='{{item.name}}'></image>
+            <text>{{item.name}}</text>
+        </view>
+      </block>
+  </view>
+</view></view>
+</scroll-view>
+    </swiper-item>
+    <!-- 风格 页面-->
+     <swiper-item>
+<view class='style_main'>
+    <block wx:for="{{styleItems}}" wx:key="id">
+        <view  data-index="{{index}}"  class='style_title'>
+        {{item.cate_name}}<view class='style_more' data-id="{{item.cate_id}}"  bindtap='clickMore'>更多<icon class="styleicon .icon-arrow-right-copy-copy-copy" data-id="{{item.cate_id}}" ></icon></view>
+        </view>
+        <block wx:for="{{styleItems[index].children}}" wx:key="id">
+          <image src="{{item.image}}" class='style_image'  mode='aspectFit'></image>
+        </block>
+    </block>
+</view>
+    </swiper-item>
+
+   <!-- 颜色页面 -->
+   <!-- 为了解决前面两个tab页面影响颜色页面红色不能点的问题而改动的 -->
+     <swiper-item>
+  <!-- color页面导航栏 -->
+  <view class="color-bt">
+    <view class="colorbt_style {{colortab==0 ? 'onn' : ''}}" data-current="0" bindtap="switchcolorbt"><image src='/images/icon/red.png' class='colorbt_icon'></image>红</view>
+    <view class="colorbt_style {{colortab==1 ? 'onn' : ''}}" data-current="1" bindtap="switchcolorbt"><image src='/images/icon/orange.png' class='colorbt_icon'></image>橙</view>
+    <view class="colorbt_style {{colortab==2 ? 'onn' : ''}}" data-current="2" bindtap="switchcolorbt"><image src='/images/icon/yellow.png' class='colorbt_icon'></image>黄</view>
+    <view class="colorbt_style {{colortab==3 ? 'onn' : ''}}" data-current="3" bindtap="switchcolorbt"><image src='/images/icon/green.png' class='colorbt_icon'></image>绿</view>
+    <view class="colorbt_style {{colortab==4 ? 'onn' : ''}}" data-current="4" bindtap="switchcolorbt"><image src='/images/icon/blue.png' class='colorbt_icon'></image>蓝</view>
+    <view class="colorbt_style {{colortab==5 ? 'onn' : ''}}" data-current="5" bindtap="switchcolorbt"><image src='/images/icon/black.png' class='colorbt_icon'></image>黑</view>
+    <view class="colorbt_style {{colortab==6 ? 'onn' : ''}}" data-current="6" bindtap="switchcolorbt"><image src='/images/icon/white.png' class='colorbt_icon'></image>白</view>
+    <view class="colorbt_style {{colortab==7 ? 'onn' : ''}}" data-current="7" bindtap="switchcolorbt"><image src='/images/icon/purple.png' class='colorbt_icon'></image>紫</view>
+</view>
+<!-- 颜色页面内容 -->
+    <view wx:if="{{colortab==0}}">
+     <block wx:for="{{colorImage}}" wx:key="index">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+   </view>
+
+    <view wx:if="{{colortab==1}}">
+     <block wx:for="{{colorImage}}" wx:key="index">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+    <view wx:if="{{colortab==2}}">
+       <block wx:for="{{colorImage}}" wx:key="index">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+    <view wx:if="{{colortab==3}}">
+     <block wx:key="index" wx:for="{{colorImage}}">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+   </view>
+    <view wx:if="{{colortab==4}}">
+     <block wx:key="index" wx:for="{{colorImage}}">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+    <view wx:if="{{colortab==5}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+      <view wx:if="{{colortab==6}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+      <view wx:if="{{colortab==7}}">
+       <block wx:key="index" wx:for="{{colorImage}}">
+    <image src='{{item}}' class='colorbt_child_image' mode='aspectFill' bindtap='details' data-src='{{item}}' data-index='{{index}}'></image>
+   </block>
+    </view>
+    </swiper-item>
+</swiper>
+
+
+
+
+
+<!-- 搜索框模块 -->
+<view class="weui-search-bar">
+	<view class="weui-search-bar__form">
+		<view class="weui-search-bar__box">
+			<icon class="weui-icon-search_in-box" type="search" size="15"></icon>
+			<input type="text" class="weui-search-bar__input" disabled='true' placeholder="搜索入口" bindtap="wxSearchTab" />
+			<image src='../../images/media.png' class='media' bindtap='media'></image>
+			<!-- 颜色提取 -->
+		</view>
+	</view>
+</view>
+<view style="margin-top:70px;">
+	<view wx:for="{{bannerList}}" wx:for-index="index" wx:for-item="item" wx:key="index" >
+		<view class="ban-list" wx:if="{{index%2==0}}" bindtap='classifyclick' data-name='{{item.title}}'>
+			<view class=" {{ 'ban-url' + index}}">
+				<image src="{{item.url}}" mode="aspectFill"></image>
+			</view>
+			<view class="ban-item">
+				<view class="ban-title">{{item.title}}</view>
+				<view class="ban-english">{{item.english}}</view>
+			</view>
+		</view>
+		<view class="ban-list" data-name='{{item.title}}'  bindtap='classifyclick' wx:else>
+			<view class="ban-item">
+				<view class="ban-title">{{item.title}}</view>
+				<view class="ban-english">{{item.english}}</view>
+			</view>
+			<view class=" {{ 'ban-url' + index}}">
+				<image src="{{item.url}}" mode="aspectFill"></image>
+			</view>
+		</view>
+
+	</view>
+</view>

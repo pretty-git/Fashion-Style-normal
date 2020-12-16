@@ -1,79 +1,79 @@
-
 <view class="page">
-    <view class="page__hd i-header">
-        <view class="g-bd">
-            <view class="g-bda" wx:if="{{userInfo}}">
-                <view  class="g-bda-userinfo">
-                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-                </view>
-            </view>
-            <view wx:else>
-               <view bindtap="getuserinfo" class="g-bda-userinfo">
-                    <image class="userinfo-avatar" ></image>
-                    <text class="userinfo-nickname">点击登陆</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    
-    <view class="page__bd">
-        <view class="weui-panel">
-            <view class="weui-panel__hd">个人中心</view>
-            <view class="weui-panel__bd">
-                <view class="weui-media-box weui-media-box_small-appmsg">
-                    <view class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="../your/your" class="weui-cell weui-cell_access"  hover-class="weui-cell_active">
-                            <view class="weui-cell__hd">
-                                <image src="../../images/icon/your.png" style="width: 24px;height: 24px;margin-right: 10px;margin-top:10rpx;"  />
-                            </view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>看看你适合什么样的穿搭</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                            
-                        </navigator>
-                         <navigator url="../addimage/addimage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd">
-                                <image src="../../images/image.png" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;"  />
-                            </view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>上传搭配</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="../collection/collection" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd">
-                                <image src="../../images/icon/collection.png" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;"  />
-                            </view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>我的收藏</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+	<view class="page__hd i-header">
+		<view class="g-bd">
+			<view class="g-bda" wx:if="{{userInfo}}">
+				<view class="g-bda-userinfo">
+					<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+					<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+				</view>
+			</view>
+			<view wx:else>
+				<view bindtap="getuserinfo" class="g-bda-userinfo">
+					<image class="userinfo-avatar"></image>
+					<text class="userinfo-nickname">点击登陆</text>
+				</view>
+			</view>
+		</view>
+	</view>
 
- <navigator url="../userhelp/userhelp" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd">
-                                <image src="https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%B8%AE%E5%8A%A9.png?sign=d2b51b5cb1c020e1d336c21dfe73c361&t=1557565531" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;"  />
-                            </view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>使用帮助</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+	<view class="page__bd">
+		<view class="weui-panel">
+			<!-- <view class="weui-panel__hd">个人中心</view> -->
+			<view class="weui-panel__bd">
+				<view class="weui-media-box weui-media-box_small-appmsg">
+					<view class="weui-cells weui-cells_in-small-appmsg">
+                    <navigator url="../addimage/addimage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+							<!-- <view class="weui-cell__hd">
+								<image src="../../images/image.png" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;" />
+							</view> -->
+							<view class="weui-cell__bd weui-cell_primary">
+								<view>上传搭配</view>
+							</view>
+							<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+						</navigator>
+						<navigator url="../your/your" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+							<!-- <view class="weui-cell__hd">
+								<image src="../../images/icon/your.png" style="width: 24px;height: 21px;margin-right: 10px;margin-top:10rpx;" />
+							</view> -->
+							<view class="weui-cell__bd weui-cell_primary">
+								<view>看看你适合什么样的穿搭</view>
+							</view>
+							<view class="weui-cell__ft weui-cell__ft_in-access"></view>
 
-                        <view  bindtap="about" class="weui-cell weui-cell_access"  hover-class="weui-cell_active">
-                            <view class="weui-cell__hd">
-                                <image src="../../images/icon/about.png" style="width: 20px;height: 20px;margin-right: 11px;margin-top:18rpx;"  />
-                            </view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>关于本程序</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </view>
-                    </view>
-                </view>
-            </view>
-        </view>
-    </view>
+						</navigator>
+						
+						<navigator url="../collection/collection" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+							<!-- <view class="weui-cell__hd">
+								<image src="../../images/icon/collection.png" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;" />
+							</view> -->
+							<view class="weui-cell__bd weui-cell_primary">
+								<view>我的收藏</view>
+							</view>
+							<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+						</navigator>
+
+						<navigator url="../userhelp/userhelp" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+							<!-- <view class="weui-cell__hd">
+								<image src="https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%B8%AE%E5%8A%A9.png?sign=d2b51b5cb1c020e1d336c21dfe73c361&t=1557565531" style="width: 22px;height: 22px;margin-right: 11px;margin-top:12rpx;" />
+							</view> -->
+							<view class="weui-cell__bd weui-cell_primary">
+								<view>使用帮助</view>
+							</view>
+							<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+						</navigator>
+
+						<view bindtap="about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+							<!-- <view class="weui-cell__hd">
+								<image src="../../images/icon/about.png" style="width: 20px;height: 20px;margin-right: 11px;margin-top:18rpx;" />
+							</view> -->
+							<view class="weui-cell__bd weui-cell_primary">
+								<view>关于本程序</view>
+							</view>
+							<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </view>

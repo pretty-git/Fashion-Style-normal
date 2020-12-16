@@ -1,11 +1,7 @@
 <!--pages/index/index.wxml-->
 
 <!--轮播图-->
-  <swiper  style="{{style}}" indicator-dots="{{indicatordots}}"  autoplay="{{autoplay}}" interval="{{interval}}"   duration="{{duration}}">
-  <!--indicatorDots: true,//是否显示面板指示点;
-    autoplay: true,//是否自动播放;
-    interval: 3000,//动画间隔的时间;
-    duration: 500,//动画播放的时长;-->
+  <swiper  class="swipers" indicator-dots="{{indicatordots}}"  autoplay="{{autoplay}}" interval="{{interval}}"   duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="index">
     <navigator url='/pages/mmore/mmore'>   <!--  图片跳转 -->
       <swiper-item>

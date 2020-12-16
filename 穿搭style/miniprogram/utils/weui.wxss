@@ -67,7 +67,7 @@ icon {
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1rpx solid #D9D9D9;
+  /* border-top: 1rpx solid #D9D9D9; */
   color: #D9D9D9;
   left: 15px;
 }
@@ -86,6 +86,7 @@ icon {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
+          padding: 10px 0;
 }
 .weui-cell__ft {
   text-align: right;
@@ -758,7 +759,7 @@ icon {
   overflow: hidden;
 }
 .weui-panel:first-child {
-  margin-top: 0;
+  margin-top: 40px;
 }
 .weui-panel:before {
   content: " ";

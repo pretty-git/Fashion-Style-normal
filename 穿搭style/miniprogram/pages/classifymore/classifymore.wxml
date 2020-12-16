@@ -1,7 +1,7 @@
 <scroll-view scroll-y="true"  lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" style="height:{{height}}px">
 <view class='more'>
-<view wx:for="{{imageList}}" class="container_image">
-<image src="{{item}}" class='my_img' mode='aspectFill' bindtap='previewImage' data-src="{{item}}" data-index='{{index}}'></image>
+<view wx:for="{{imageList}}" class="container_image" wx:key="index">
+<image src="{{item}}" class='my_img' mode='aspectFill' bindtap='previewImage' data-src="{{item}}" data-index='{{index}}' ></image>
 </view>
 </view>
  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">

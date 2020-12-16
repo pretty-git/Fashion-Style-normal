@@ -734,7 +734,34 @@ Page({
     total: '',
     curNav: 1,
     curIndex: 0,
-    imgBase: null
+    imgBase: null,
+    bannerList:[{
+      title:"上衣",
+      english:'T-SHIRT',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E4%B8%8A%E8%A1%A3.png?sign=4a9d3abf489eb87097c31fb24b7e42af&t=1594651828"
+    },{
+      title:"裤子",
+      english:'TROUSERS',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E8%A3%A4%E5%AD%90.png?sign=9f6c557a548fd7af01f2b4e9c0952b04&t=1594651916"
+    },{
+      title:"裙装",
+      english:'DRESS',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E8%A3%99%E5%AD%90.png?sign=35b17955267b356b4ae2c41d82afcf00&t=1594651929"
+    }, {
+      title:"鞋子",
+      english:'SHOES',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E9%9E%8B%E5%AD%90.png?sign=4183532b612b1e0a0d9a671b09848f6a&t=1594652048"
+    }, {
+      title:"饰品",
+      english:'ACCESSORES',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E9%A5%B0%E5%93%81.png?sign=7bb14e807eb91c0f39bc17b2068dd723&t=1594652024"
+    },{
+      title:"内衣",
+      english:'UNOERWEAR',
+      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E5%86%85%E8%A1%A3.png?sign=b3db8f4d6b0af843488f3fa050c4f6d9&t=1594651993"
+    }
+    
+    ]
   },
 
   /**
@@ -1019,8 +1046,9 @@ Page({
     })
   },
   classifyclick:function(e) {
+    console.log(e)
     var that = this;
-    var name = e.target.dataset.name;
+    var name = e.currentTarget.dataset.name;
     // console.log (name)
     // console.log(that.data.curNav)
     wx.navigateTo({
@@ -1034,4 +1062,9 @@ Page({
       url: '../stylemore/stylemore?id=' + this.data.styleItems[id - 1].cate_name
     })
   },
+  clickPages:function(e) {
+    wx.navigateTo({
+      url: "../indexpages/indexpages?id=" + e.target.dataset.id
+    })
+  }
 })

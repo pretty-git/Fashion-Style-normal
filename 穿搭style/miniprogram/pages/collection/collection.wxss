@@ -1,13 +1,17 @@
-.add_image {
-height: 200rpx;
-}
+
 .addImage {
-width:108px;
+width:100%;
+border-radius: 10px;
 justify-content:center;
 align-items:303rpx;
 margin:20rpx 0 0 0rpx;
 background-color:#fff;
-height:155px;
+/* height:155px; */
+}
+.addimages {
+  width: 48%;
+  padding: 0 1%;
+  
 }
 .add_icon {
 width:190rpx;

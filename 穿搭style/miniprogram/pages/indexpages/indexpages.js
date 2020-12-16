@@ -12,7 +12,7 @@ Page({
     total: '',
     list: ['女士上衣', '女士裙子', '女鞋', '男衣', '男士裤装','男士裤鞋'],
     id:'',
-    
+    loading:true
   },
   lower: function (e) {
     var that = this;
@@ -88,7 +88,8 @@ Page({
         }
         that.setData({
           imageList: list,
-          nameImage: name
+          nameImage: name,
+          loading:false
         })
         // console.log(that.data.imageList)
         // console.log(res.result.data[0].url)

@@ -36,9 +36,9 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wx8bb29c03f97c5ede",
+  "appid": "wx65dcf3ae8fca9338",
   "projectname": "%E6%AD%A3%E5%BC%8F%E7%89%88",
-  "libVersion": "2.6.5",
+  "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",

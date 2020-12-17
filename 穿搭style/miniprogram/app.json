@@ -1,7 +1,8 @@
 {
   "cloud": true,
   "pages": [
-     "pages/index/index",
+    "pages/index/index",
+    "pages/about/about",
     "pages/video/video",
     "pages/search/search",
     "pages/authorize/authorize",

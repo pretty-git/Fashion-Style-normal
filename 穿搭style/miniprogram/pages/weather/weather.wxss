@@ -1,64 +1,131 @@
 .map {
-    font-size: 18px;
-    text-align: left;
-    height: 20px;
-    font-weight: 100;
-    padding: 5px 10px;
+  font-size: 18px;
+  text-align: left;
+  height: 20px;
+  font-weight: 100;
+  padding: 5px 10px;
 }
+
 .weather {
   width: 100%;
   display: flex;
 }
+
 .icon {
-position: absolute;
-right: 6px;
-font-size: 29px;
-top: 18px;
+  position: absolute;
+  right: 6px;
+  font-size: 29px;
+  top: 18px;
 
 }
+
 .top {
- position: relative;
-font-size: 80px;
-width: 50%;
-text-align: center;
-margin: 20px 0;
-font-weight: 100;
-letter-spacing: 2px;
+  position: relative;
+  font-size: 80px;
+  width: 50%;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 100;
+  letter-spacing: 2px;
 
 
 }
+
 .images {
   width: 50%;
   text-align: center;
-margin: 40px 0 20px;
+  margin: 40px 0 20px;
 
 
 }
+
 .images image {
   width: 100px;
   height: 100px;
 }
-.air {
-  
-  width: 100%;
-border-top-style: solid;
-border-top-color: #ebebeb;
-border-top-width: 8px;
-border-bottom-color: #ebebeb;
-border-bottom-width: 10px;
-display: flex;
 
-border-bottom-style: solid;
+.air {
+
+  width: 100%;
+  border-top-style: solid;
+  border-top-color: #ebebeb;
+  border-top-width: 8px;
+  border-bottom-color: #ebebeb;
+  border-bottom-width: 10px;
+  display: flex;
+
+  border-bottom-style: solid;
 
 }
+
 .right {
   margin: auto 0;
-border-left: 0.5px solid #d3d3d3;
-padding: 20px 0;
-padding-left: 20px;
+  border-left: 0.5px solid #d3d3d3;
+  padding: 20px 0;
+  padding-left: 20px;
 
 }
+
+.air-item {
+  width: 40%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.air-img {
+  width: 100px;
+  height: 100px;
+}
+
 .title {
   font-size: 13px;
   color: #c4c3c3;
+}
+
+.day-list {
+  display: flex;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.day-item {
+  width: 33.3%;
+  border-right: 0.5px solid #d3d3d3;
+}
+
+.line {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.day-img {
+  width: 60px;
+  height: 60px;
+}
+
+.live-list {
+  display: flex;
+  font-size: 13px;
+  font-weight: 200;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top-style: solid;
+  border-top-color: #ebebeb;
+  border-top-width: 8px;
+}
+
+.live-item {
+  width: 40%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.live-img {
+  width: 50px;
+  height: 47px;
+}
+
+.live-title {
+  font-weight: bold;
+  margin-bottom: 6px;
 }

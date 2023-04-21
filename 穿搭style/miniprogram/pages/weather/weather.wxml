@@ -1,9 +1,9 @@
 <view class="map">
-  {{location}} <image src="../../images/map.png" mode="aspectFill"  style="width: 15px;height: 15px;"></image>
+  <image src="../../images/map.png" mode="aspectFill" style="width: 15px;height: 15px;"></image>{{location}} 
 </view>
 <view class="weather">
   <view class="top">
-    {{weatherData.liveData.temperature}}
+    {{weatherData.tempMax}}
     <view class="icon">℃</view>
   </view>
   <view class="images">
@@ -11,41 +11,42 @@
   </view>
 </view>
 <view class="air">
-  <view  style="width:40%;text-align:center;margin:10px 0;">
-    <image src="https://7765-we-63574e-1258830969.tcb.qcloud.la/weather/tree.png?sign=0a38853996f76ed0488dc8dd66ea6603&t=1587103993" mode="aspectFill" style=" width: 100px;height: 100px;"></image>
+  <view class="air-item">
+    <image src="../../images/tree.png" mode="aspectFill" class="air-img"></image>
     <view>空气质量良</view>
   </view>
   <view class="right">
     <view>
       <text class="title">相对湿度：</text>
-      <text>{{weatherData.humidity.data}}</text>
+      <text>{{weatherData.humidity}}%</text>
     </view>
-     <view>
+    <view>
       <text class="title">实时气压：</text>
-      <text>{{weatherData.liveData.humidity}} hpa</text>
+      <text>{{weatherData.pressure }} hpa</text>
     </view>
     <view>
       <text class="title">风向风力：</text>
-      <text>{{weatherData.winddirection.data}}，{{weatherData.windpower.data}}</text>
+      <text>{{weatherData.windDirNight}}，{{weatherData.windScaleNight}}km</text>
     </view>
   </view>
 </view>
 <!-- 最近几天 -->
-<view style="display:flex;font-size:13px;font-weight:200;">
-<view wx:for="{{dayList}}" wx:key="index" style="width:33.3%;border-right: 0.5px solid #d3d3d3;">
-    <view  style="text-align:center;margin:10px 0;">
-    <image src="{{item.src}}" mode="aspectFill" style=" width: 60px;height: 60px;"></image>
-    <view>{{item.text_night}}</view>
-    <view>{{item.low}}℃ ~ {{item.high}}℃</view>
-    <view wx:if="{{index == 0}}">明天</view>
-    <view wx:elif="{{index == 1}}">后天</view>
-    <view wx:else>{{item.date}}</view>
+<view class="day-list">
+  <view wx:for="{{dayList}}" wx:key="index" class="day-item">
+    <view class="line">
+      <image src="{{item.imagsrc}}" mode="aspectFill" class="day-img"></image>
+      <view>{{item.textDay}}</view>
+      <view>{{item.tempMin}}℃ ~ {{item.tempMax}}℃</view>
+      <view wx:if="{{index == 0}}">明天</view>
+      <view wx:elif="{{index == 1}}">后天</view>
+      <view wx:else>{{item.fxDate}}</view>
+    </view>
   </view>
 </view>
-</view>
-<view style="display:flex;font-size:13px;font-weight:200;width:100%;flex-wrap: wrap;border-top-style: solid;border-top-color: #ebebeb;border-top-width: 8px;">
-<view wx:for="{{livelist}}" wx:key="index" style="width:33.3%;text-align:center;margin:10px 0;">
-   <image src="{{item.src}}" mode="aspectFill" style=" width: 50px;height: 47px;"></image>
-    <view>{{item.title}}</view>
-</view>
+<view class="live-list">
+  <view wx:for="{{livelist}}" wx:key="index" class="live-item">
+    <view class="live-title">{{item.title}}</view>
+    <image src="{{item.src}}" class="live-img" mode="aspectFill"></image>
+    <view>{{item.text}}</view>
+  </view>
 </view>

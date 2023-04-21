@@ -738,27 +738,27 @@ Page({
     bannerList:[{
       title:"上衣",
       english:'T-SHIRT',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E4%B8%8A%E8%A1%A3.png?sign=4a9d3abf489eb87097c31fb24b7e42af&t=1594651828"
+      url:"https://img.freepik.com/free-photo/portrait-sassy-attractive-asian-girl-white-casual-t-shirt-showing-tongue-winking-coquettish-while-standing-blue-wall_1258-17091.jpg?size=626&ext=jpg&ga=GA1.1.1469533930.1681910780&semt=sph"
     },{
       title:"裤子",
       english:'TROUSERS',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E8%A3%A4%E5%AD%90.png?sign=9f6c557a548fd7af01f2b4e9c0952b04&t=1594651916"
+      url:"https://img.freepik.com/premium-photo/women-tights_1122-7053.jpg?size=626&ext=jpg&ga=GA1.1.1469533930.1681910780&semt=ais"
     },{
       title:"裙装",
       english:'DRESS',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E8%A3%99%E5%AD%90.png?sign=35b17955267b356b4ae2c41d82afcf00&t=1594651929"
+      url:"https://img.freepik.com/free-photo/beautiful-redhead-woman-summer-denim-outfit-straw-hat-holding-white-bag-jumping-orange-background_197531-14882.jpg?size=626&ext=jpg&ga=GA1.2.1469533930.1681910780&semt=sph"
     }, {
       title:"鞋子",
       english:'SHOES',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E9%9E%8B%E5%AD%90.png?sign=4183532b612b1e0a0d9a671b09848f6a&t=1594652048"
+      url:"https://img.freepik.com/free-photo/fashion-shoes_1203-7555.jpg?size=626&ext=jpg&ga=GA1.1.1469533930.1681910780&semt=sph"
     }, {
       title:"饰品",
       english:'ACCESSORES',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E9%A5%B0%E5%93%81.png?sign=7bb14e807eb91c0f39bc17b2068dd723&t=1594652024"
+      url:"https://img.freepik.com/free-photo/accessories-sunglasses-perfume-hat-craft-surface_176420-11866.jpg?size=626&ext=jpg&ga=GA1.1.1469533930.1681910780&semt=sph"
     },{
       title:"内衣",
       english:'UNOERWEAR',
-      url:"https://7765-we-63574e-1258830969.tcb.qcloud.la/%E5%88%86%E7%B1%BB%E7%B4%A0%E6%9D%90/%E5%86%85%E8%A1%A3.png?sign=b3db8f4d6b0af843488f3fa050c4f6d9&t=1594651993"
+      url:"https://img.freepik.com/free-photo/young-redheaded-woman-holding-two-bouquets-narcisuss_171337-8374.jpg?size=626&ext=jpg&ga=GA1.1.1469533930.1681910780&semt=sph"
     }
     
     ]
@@ -872,24 +872,24 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
-    wx.request({
-      url: 'https://aip.baidubce.com/oauth/2.0/token',
-      header: {
-        'Content-Type': 'application/json; charset=UTF-8'
-      },
-      data: {
-        grant_type: 'client_credentials',
-        // 下面两个是百度api的id
-        client_id: 'NK1fPDT9GAZk1FEKoM2pqNau',
-        client_secret: '0V3h7e2KgTVxsG7s3meRfltZr0LvPVjc'
-      },
-      success: function (result) {
-        // 这是为了获取百度api的调用令牌
-        that.setData({
-          access_token: result.data.access_token
-        })
-      }
-    })
+    // wx.request({
+    //   url: 'https://aip.baidubce.com/oauth/2.0/token',
+    //   header: {
+    //     'Content-Type': 'application/json; charset=UTF-8'
+    //   },
+    //   data: {
+    //     grant_type: 'client_credentials',
+    //     // 下面两个是百度api的id
+    //     client_id: 'NK1fPDT9GAZk1FEKoM2pqNau',
+    //     client_secret: '0V3h7e2KgTVxsG7s3meRfltZr0LvPVjc'
+    //   },
+    //   success: function (result) {
+    //     // 这是为了获取百度api的调用令牌
+    //     that.setData({
+    //       access_token: result.data.access_token
+    //     })
+    //   }
+    // })
     /** 
      * 获取系统信息 
      */
@@ -916,45 +916,43 @@ Page({
         console.log(count); 
     //   }
     // })
-    wx.cloud.callFunction({
-      name: 'color',
-      data: {
-        a: '红'
-      },
-      success: res => {
-        // console.log(res.result.data)
-        that.setData({
-          total: res.result.data.length
-        })
-        var n = util.randomNum(res.result.data.length-1, 21)
-        // console.log(n)
-        var list = that.data.colorImage.concat(res.result.data[n[0]].url);
-        var name = that.data.nameImage.concat(res.result.data[n[0]].name);
-        for (var i = 1; i < 21; i++) {
-          list = list.concat(res.result.data[n[i]].url)
-          name = name.concat(res.result.data[n[i]].name)
-        }
-        that.setData({
-          colorImage: list,
-          nameImage: name
-        })
-        // console.log(that.data.colorImage)
-      },
-      fail: err => {
-        wx.showToast({
-          icon: 'none',
-          title: '调用失败',
-        })
-        console.error('[云函数] [database] 调用失败：', err)
-      }
-    })
+    // wx.cloud.callFunction({
+    //   name: 'color',
+    //   data: {
+    //     a: '红'
+    //   },
+    //   success: res => {
+    //     // console.log(res.result.data)
+    //     that.setData({
+    //       total: res.result.data.length
+    //     })
+    //     var n = util.randomNum(res.result.data.length-1, 21)
+    //     // console.log(n)
+    //     var list = that.data.colorImage.concat(res.result.data[n[0]].url);
+    //     var name = that.data.nameImage.concat(res.result.data[n[0]].name);
+    //     for (var i = 1; i < 21; i++) {
+    //       list = list.concat(res.result.data[n[i]].url)
+    //       name = name.concat(res.result.data[n[i]].name)
+    //     }
+    //     that.setData({
+    //       colorImage: list,
+    //       nameImage: name
+    //     })
+    //     // console.log(that.data.colorImage)
+    //   },
+    //   fail: err => {
+    //     wx.showToast({
+    //       icon: 'none',
+    //       title: '调用失败',
+    //     })
+    //     console.error('[云函数] [database] 调用失败：', err)
+    //   }
+    // })
 
   },
   bindChange: function (e) {
-
     var that = this;
     that.setData({ currentTab: e.detail.current });
-
   },
   swichNav: function (e) {
 

@@ -2,10 +2,10 @@
 
 <!--轮播图-->
   <swiper  class="swipers" indicator-dots="{{indicatordots}}"  autoplay="{{autoplay}}" interval="{{interval}}"   duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="index">
+    <block wx:for="{{imgArray}}" wx:key="index">
     <navigator url='/pages/mmore/mmore'>   <!--  图片跳转 -->
       <swiper-item>
-        <image  data-url="{{item}}" src="{{item}}" class="slide-image" style="width: 100%; height: 350rpx;" mode='aspectFit'/>
+        <image  data-url="{{item}}" src="{{item}}" class="slide-image" style="width: 100%; height: 350rpx;" mode='aspectFill'/>
       </swiper-item>
       </navigator>
     </block>

@@ -1,3 +1,0 @@
-<!--miniprogram/pages/pageShare/pageShare.wxml-->
-<WxPoster pageUrl="{{pageUrl}}" pageTitle="{{pageTitle}}" pageContentUrl="{{pageContentShortUrl}}"> </WxPoster>
-

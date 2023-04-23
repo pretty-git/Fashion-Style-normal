@@ -8,16 +8,16 @@ Page({
     location:'北京'
   },
   getIcon(code) {
-    let imagsrc = '../../images/duoyun.png'
+    let imagsrc = 'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/duoyun.png'
     let iconList = new Map()
-      iconList.set(['101','102','151','152'],'../../images/duoyun.png')
-      iconList.set(['307','300','316'],'../../images/dayu.png')
-      iconList.set(['301','302','306','307','310','311','317'],'../../images/baoyu.png')
-      iconList.set( ['312','318','350','351'],'../../images/leizhenyu.png')
-      iconList.set(['103','153'],'../../images/wanduoyun.png')
-      iconList.set(['100','150'],'../../images/qingtian.png')
-      iconList.set(['305','306','309','314','315'],'../../images/xiaoyu.png')
-      iconList.set(['104'],'../../images/阴天.png')
+      iconList.set(['101','102','151','152'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/duoyun.png')
+      iconList.set(['307','300','316'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/dayu.png')
+      iconList.set(['301','302','306','307','310','311','317'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/baoyu.png')
+      iconList.set( ['312','318','350','351'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/leizhenyu.png')
+      iconList.set(['103','153'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/wanduoyun.png')
+      iconList.set(['100','150'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/qingtian.png')
+      iconList.set(['305','306','309','314','315'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/xiaoyu.png')
+      iconList.set(['104'],'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/%E9%98%B4%E5%A4%A9.png')
      for(let [key, value] of iconList) {
       if(key.includes(code)) {
         imagsrc = value
@@ -25,7 +25,7 @@ Page({
     }
     return imagsrc
   },
-  onLoad: function () {
+  onShow: function () {
     wx.showLoading({
       title: '加载中',
     })
@@ -64,7 +64,7 @@ Page({
          wx.request({
            url: `https://devapi.qweather.com/v7/indices/1d?type=1,2,3,9&key=3abac32bc219490380594f27aa1c7247&location=${location}`,
            success(res){
-             const img = ['../../images/户外.png', '../../images/车.png','../../images/wear.png','../../images/感冒药物.png']
+             const img = ['https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/%E6%88%B7%E5%A4%96.png', 'https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/%E8%BD%A6.png','https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/wear.png','https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/%E6%84%9F%E5%86%92%E8%8D%AF%E7%89%A9.png']
              const list = res.data.daily.map((item,index)=>({
                title: item.name,
                  src: img[index],

@@ -6,7 +6,7 @@
 		<view class="weui-search-bar__box">
 			<icon class="weui-icon-search_in-box" type="search" size="15"></icon>
 			<input type="text" class="weui-search-bar__input" disabled='true' placeholder="搜索入口" bindtap="wxSearchTab" />
-			<image src='../../images/media.png' class='media' bindtap='media'></image>
+			<image src='https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/media.png' class='media' bindtap='media'></image>
 			<!-- 颜色提取 -->
 		</view>
 	</view>

@@ -1,7 +1,7 @@
 
 <view class="addimage" bindtap='addImage'>
   <image src='{{url}}' mode="aspectFit" ></image>
- <image src="../../images/media.png" mode="aspectFit" class="addicon"></image>
+ <image src="https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/media.png" mode="aspectFit" class="addicon"></image>
 </view>
 <van-popup show="{{ show }}" bind:close="onClose">
 <view class="titleback">

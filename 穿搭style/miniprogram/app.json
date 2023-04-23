@@ -26,7 +26,7 @@
     "pages/searchdetails/searchdetails",
     "pages/upimage/upimage"
   ],
-  "requiredPrivateInfos": ["choosePoi","getFuzzyLocation","chooseAddress"],
+  "requiredPrivateInfos": ["choosePoi","chooseAddress","getLocation"],
   "lazyCodeLoading": "requiredComponents",
   
 "permission": {

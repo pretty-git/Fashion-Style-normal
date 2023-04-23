@@ -1,5 +1,5 @@
 <view class="map">
-  <image src="../../images/map.png" mode="aspectFill" style="width: 15px;height: 15px;"></image>{{location}} 
+  <image src="https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/map.png" mode="aspectFill" style="width: 15px;height: 15px;"></image>{{location}} 
 </view>
 <view class="weather">
   <view class="top">
@@ -12,7 +12,7 @@
 </view>
 <view class="air">
   <view class="air-item">
-    <image src="../../images/tree.png" mode="aspectFill" class="air-img"></image>
+    <image src="https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/tree.png" mode="aspectFill" class="air-img"></image>
     <view>空气质量良</view>
   </view>
   <view class="right">

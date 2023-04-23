@@ -1,7 +1,7 @@
 <!--pages/authorize/authorize.wxml-->
 <view wx:if="{{canIUse}}">
     <view class='header'>
-        <image src='/images/logo.png'></image>
+        <image src='https://gitee.com/huanchi/wear_fashionstyle/raw/master/image/logo.png'></image>
     </view>
 
     <view class='content'>
